@@ -1,0 +1,23 @@
+
+.main{
+    position: relative;
+    width: 399px;
+    height: 336px;
+    margin: 2px  auto;
+    border: 1px solid black;
+  
+}
+.preto{
+    background-color: black;
+}
+.pixel{
+    font-size: 0.5em;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    display: inline;
+    float: left;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
