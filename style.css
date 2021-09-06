@@ -1,15 +1,60 @@
-
-.main{
+.display{
     position: relative;
+    height: 336px;
+    width: 602px;
+    margin: 5px auto;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.opcoes-esquerda{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 336px;
+    display: inline;
+    border: 1px solid;
+    text-align: center;
+}
+
+.opcoes-direita{
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 336px;
+    border: 1px solid;
+    text-align: center;
+   
+    /* display: inline-block; */
+    
+}
+/* 
+.opcao{
+    position: relative;
+    width: 80px;
+    height: 62.2px;
+    border: 1px solid;
+    display: inline-block 
+} */
+img{
+    width: 55px;
+   
+}
+.main{
+    position: absolute;
+    left: 100px;
     width: 399px;
     height: 336px;
-    margin: 2px  auto;
+    /* margin: 2px  auto; */
     border: 1px solid black;
   
 }
 .preto{
     background-color: black;
 }
+
 .pixel{
     font-size: 0.5em;
     text-align: center;
