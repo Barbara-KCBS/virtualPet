@@ -32,7 +32,7 @@ function aguaFrame7(){
 }
 function beberAgua(){
     contador = 13;
-    var intervalo = setInterval(() =>{
+    var intervaloBebida = setInterval(() =>{
         console.log(contador);
         if(contador == 13){
             clearInterval(intervaloBebe);
@@ -76,10 +76,12 @@ function beberAgua(){
             frameBebeMovimento1();
         }
         if(contador == 1){
-            clearInterval(intervalo);
             dinoBebe();          
-        }     
+            clearInterval(intervaloBebida);
+        }  
         contador -= 1;
     }, 1050);
 }
+
+// beberAgua();
 

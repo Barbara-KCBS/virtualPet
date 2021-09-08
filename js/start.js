@@ -204,7 +204,7 @@ function comecarJogo(){
             
             contador --;
            
-    }, 1050);
+    }, 50);
     
 }
 
