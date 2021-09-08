@@ -11,15 +11,17 @@
 </head>
 <body>
     <button id="iniciar-jogo">iniciar jogo</button>
+    <button class="selecao-esquerda"><</button>
+    <button class="selecao-direita">></button>
+    <button id="enter">Enter</button>
 
     <div class="display">
         <div class="opcoes-esquerda">
-            <img id="agua" class="opcao" src="./img/agua.svg" alt="">
-            <img id="comida" class="opcao" src="./img/comida.svg" alt="">
-            <img class="opcao" src="./img/luz.svg" alt="">
-            <img class="opcao" src="./img/carinho.svg" alt="">
-            <img class="opcao" src="./img/tarefas.svg" alt="">
-    
+            <div class="opcao"><img id="agua" src="./img/agua.svg" alt=""></div>
+            <div class="opcao"><img id="comida"src="./img/comida.svg" alt=""></div>
+            <div class="opcao"><img id="luz" src="./img/luz.svg" alt=""></div>
+            <div class="opcao"><img id="carinho" style="width: 65px;" src="./img/carinho.svg" alt=""></div>
+            <div class="opcao"><img id="necessidades" src="./img/tarefas.svg" alt=""></div>
         </div>
 
         <main class="main">
@@ -393,13 +395,15 @@
         </div>
     </main>
     <div class="opcoes-direita">
-            <img src="./img/brincar.svg" alt="">
-            <img src="./img/estudar.svg" alt="">
-            <img src="./img/banho.svg" alt="">
-            <img src="./img/ar.svg" alt="">
-            <img src="./img/medico.svg" alt="">
+        <div class="opcao"><img id="brincadeira" style="width: 60px;" src="./img/brincar.svg" alt=""></div>
+        <div class="opcao"><img id="estudo" style="width: 60px;" src="./img/estudar.svg" alt=""></div>
+        <div class="opcao"><img id="banho" style="width: 60px;" src="./img/banho.svg" alt=""></div>
+        <div class="opcao"><img id="ar" style="width: 60px;" src="./img/ar.svg" alt=""></div>
+        <div class="opcao"><img id="medico" style="width: 60px;" src="./img/medico.svg" alt=""> </div>     
+            
     </div>
 </div>
+
 
     <script src="./js/jquery.js"></script>
     <script src="./js/dinoBaby.js"></script>
@@ -408,6 +412,8 @@
     <script src="./js/bebida.js"></script>
     <script src="./js/arrotar.js"></script>
     <script src="./js/comida.js"></script>
+    <script src="./js/selecaoEsquerda.js"></script>
+    <script src="./js/selecaoDireita.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

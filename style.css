@@ -4,9 +4,12 @@
     width: 602px;
     margin: 5px auto;
     border: 1px solid;
-    display: flex;
     justify-content: space-between;
     
+}
+.opcao{
+    width: 100px;
+    height: 67px;
 }
 
 .opcoes-esquerda{
@@ -14,9 +17,9 @@
     left: 0;
     width: 100px;
     height: 336px;
-    display: inline;
     border: 1px solid;
     text-align: center;
+
 }
 
 .opcoes-direita{
@@ -26,21 +29,17 @@
     height: 336px;
     border: 1px solid;
     text-align: center;
-   
-    /* display: inline-block; */
     
 }
-/* 
 .opcao{
-    position: relative;
-    width: 80px;
-    height: 62.2px;
-    border: 1px solid;
-    display: inline-block 
-} */
+    width: 100px;
+    height: 60px;
+}
+
 img{
-    width: 55px;
-   
+   margin: 5px auto 0;
+   width: 45px;
+   display: block; 
 }
 .main{
     position: absolute;
