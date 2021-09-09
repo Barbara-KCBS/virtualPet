@@ -1,47 +1,59 @@
-var brincadeira = $("#brincadeira").toggle()
-var estudo = $("#estudo").toggle()
-var banho = $("#banho").toggle()
-var ar = $("#ar").toggle()
-var medico = $("#medico").toggle()
+var brincadeira = $("#brincadeira");
+var estudo = $("#estudo");
+var banho = $("#banho");
+var ar= $("#ar");
+var medico= $("#medico");
 
-var compararOpcao1 = 1;
-var compararOpcao2 = false;
+$(".atividade-direita").hide();
+
+var contadorSelecaoDireita = 1;
+var ultimaAtividadeDireita = false;
 
 var atividade;
 
 function selecaoDireita(){
-    
-    if(compararOpcao1 == 1 && compararOpcao2 == false){
-        brincadeira.toggle(); 
+     
+    $(".atividade-esquerda").hide();
+
+    if(contadorSelecaoDireita == 1 && ultimaAtividadeDireita == false){
+        brincadeira.show(); 
         atividade = "brincar";
+        contadorSelecaoEsquerda  = 1;
+       
     }
-    if(compararOpcao1 == 1 && compararOpcao2 == true){
-        medico.toggle();
-        brincadeira.toggle(); 
+    if(contadorSelecaoDireita == 1 && ultimaAtividadeDireita == true){
+        medico.hide();
+        brincadeira.show(); 
         atividade = "brincar";
+        contadorSelecaoEsquerda  = 1;
     }
-    if(compararOpcao1 == 2){
-        brincadeira.toggle(); 
-        estudo.toggle();
+    if(contadorSelecaoDireita == 2){
+        brincadeira.hide(); 
+        estudo.show();
         atividade = "estudar";
+        contadorSelecaoEsquerda  = 2;
     }
-    if(compararOpcao1 == 3){
-        estudo.toggle();
-        banho.toggle();
+    if(contadorSelecaoDireita == 3){
+        estudo.hide();
+        banho.show();
+        contadorSelecaoEsquerda  = 3;
     }
-    if(compararOpcao1 == 4){
-        banho.toggle(); 
-        ar.toggle(); 
+    if(contadorSelecaoDireita == 4){
+        banho.hide(); 
+        ar.show(); 
+        contadorSelecaoEsquerda  = 4;
     }
-    if(compararOpcao1 == 5){
-        ar.toggle();
-        medico.toggle();
-        compararOpcao1 -= 5;
-        compararOpcao2 = true;
+    if(contadorSelecaoDireita == 5){
+        ar.hide();
+        medico.show();
+        contadorSelecaoDireita -= 5;
+        ultimaAtividadeDireita = true;
+        contadorSelecaoEsquerda  = 5;
     }
 
-    compararOpcao1 += 1;
+    contadorSelecaoDireita += 1;
 }
+
 $(".selecao-direita").click(selecaoDireita);
 
 // $("#enter").click(()=>{

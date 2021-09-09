@@ -35,7 +35,3 @@ function opcaoDeComida(){
 
     compararComida1 += 1;
 }
-
-
-
-

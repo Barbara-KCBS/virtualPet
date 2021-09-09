@@ -1,57 +1,72 @@
-var agua = $("#agua").toggle()
-var comida = $("#comida").toggle()
-var luz = $("#luz").toggle()
-var carinho = $("#carinho").toggle()
-var necessidades = $("#necessidades").toggle()
+var agua = $("#agua");
+var comparando = $("#comida");
+var luz = $("#luz");
+var carinho = $("#carinho");
+var necessidades = $("#necessidades");
 
-var compararOpcao1 = 1;
-var compararOpcao2 = false;
+$(".atividade-esquerda").hide();
+
+var contadorSelecaoEsquerda = 1;
+var ultimaAtividadeEsquerda = false;
+
+var eventoSelecaoEsquerda = true;
 
 var atividade;
 
+
 function selecaoEsquerda(){
+
+    if(eventoSelecaoEsquerda == false){
+        return
+    }
     
-    if(compararOpcao1 == 1 && compararOpcao2 == false){
-        agua.toggle(); 
+    $(".atividade-direita").hide();
+
+    if(contadorSelecaoEsquerda == 1 && ultimaAtividadeEsquerda == false){
+        agua.show(); 
         atividade = "beber";
+        contadorSelecaoDireita = 1;
     }
-    if(compararOpcao1 == 1 && compararOpcao2 == true){
-        necessidades.toggle();
-        agua.toggle(); 
+    if(contadorSelecaoEsquerda == 1 && ultimaAtividadeEsquerda == true){
+        necessidades.hide();
+        agua.show(); 
         atividade = "beber";
+        contadorSelecaoDireita = 1;
     }
-    if(compararOpcao1 == 2){
-        agua.toggle(); 
-        comida.toggle();
+    if(contadorSelecaoEsquerda == 2){
+        agua.hide(); 
+        comparando.show();
         atividade = "comer";
+        contadorSelecaoDireita = 2;
     }
-    if(compararOpcao1 == 3){
-        comida.toggle();
-        luz.toggle();
+    if(contadorSelecaoEsquerda == 3){
+        comparando.hide();
+        luz.show();
+        contadorSelecaoDireita = 3;
     }
-    if(compararOpcao1 == 4){
-        luz.toggle(); 
-        carinho.toggle(); 
+    if(contadorSelecaoEsquerda == 4){
+        luz.hide(); 
+        carinho.show(); 
+        contadorSelecaoDireita = 4;
     }
-    if(compararOpcao1 == 5){
-        carinho.toggle();
-        necessidades.toggle();
-        compararOpcao1 -= 5;
-        compararOpcao2 = true;
+    if(contadorSelecaoEsquerda == 5){
+        carinho.hide();
+        necessidades.show();
+        contadorSelecaoEsquerda -= 5;
+        ultimaAtividadeEsquerda = true;
+        contadorSelecaoDireita = 5;
     }
 
-    compararOpcao1 += 1;
+    contadorSelecaoEsquerda += 1;
 }
-$(".selecao-esquerda").click(selecaoEsquerda);
 
-$("#enter").click(()=>{
-    if(atividade == "beber"){
-        beberAgua();
-    }
-    if(atividade == "comer"){
-        comerHamburguer();
-    }
-})
+
+
+
+
+
+
+
 
 
 
