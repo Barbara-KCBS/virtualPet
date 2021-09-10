@@ -15,53 +15,59 @@ function hamburguerFrame4(){
     $(".pixel").removeClass("preto");
 }
 
+var enterHambuguer = false;
+
 function comerHamburguer(){
-    console.log('esta sendo clicado')
-    let contador = 5;  
+
+    if(enterHambuguer == false){
+        return
+    }
+    
+    let contadorHamburguer = 5;  
     let contar = 1;
     let intervaloHamburguer = setInterval(() =>{
         if(contar < 3){
-            if(contador == 5){
-            clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
-            hamburguerFrame1();
+            if(contadorHamburguer == 5){
+                $(".pixel").removeClass("preto");
+                hamburguerFrame1();
             }
-            if(contador == 4){
+            if(contadorHamburguer == 4){
                 hamburguerFrame1();
                 hamburguerFrame2();
             }
-            if(contador == 3){
+            if(contadorHamburguer == 3){
                 hamburguerFrame2();
                 hamburguerFrame3();
             }
-            if(contador == 2){
+            if(contadorHamburguer == 2){
                 hamburguerFrame3();
                 hamburguerFrame4(); 
                 if(contar < 2){
-                    contador += 5;
+                    contadorHamburguer += 5;
                     contar += 1;
                 }  
             } 
-            if(contador == 1 && contar == 2){
+            if(contadorHamburguer == 1 && contar == 2){
                 frameBebeMovimento1();
             }
-            if((contador == 0 || contador == -2) && contar == 2){
+            if((contadorHamburguer == 0 || contadorHamburguer == -2) && contar == 2){
                 frameBebeMovimento1();
                 arrotarFrame();
             }
-            if((contador == -1 || contador == -3)&& contar == 2){
+            if((contadorHamburguer == -1 || contadorHamburguer == -3)&& contar == 2){
                 arrotarFrame();
                 frameBebeMovimento1();
             }
-            if(contador == -4 && contar == 2){
+            if(contadorHamburguer == -4 && contar == 2){
                 clearInterval(intervaloHamburguer);
-                dinoBebe();
+                frameBebeMovimento1();
+                hamburguer()
             }
             
         }
         
-        contador -= 1;
+        contadorHamburguer -= 1;
     }, 1000)
 }
 
-// comerHambuguer();
+

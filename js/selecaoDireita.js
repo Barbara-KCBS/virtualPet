@@ -12,7 +12,8 @@ var ultimaAtividadeDireita = false;
 var atividade;
 
 function selecaoDireita(){
-     
+
+   
     $(".atividade-esquerda").hide();
 
     if(contadorSelecaoDireita == 1 && ultimaAtividadeDireita == false){

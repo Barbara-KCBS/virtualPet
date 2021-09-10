@@ -1,24 +1,45 @@
+
 $("#iniciar-jogo").click(comecarJogo);
 
-if(eventoSelecaoEsquerda == true){
-  $(".selecao-esquerda").click(selecaoEsquerda);  
-}
+$(".selecao-esquerda").click(percorrerAtividadesDaEsquerda);  
 
-$("#enter").click(()=>{
-   
+$(".selecao-esquerda").click(percorrerOpcoesDeComida);
+
+$("#enter").click(comerHamburguer);
+
+$("#enter").click(selecaoDeAtividade);
+
+var enterSelecao = true;
+
+
+function selecaoDeAtividade(){
+
+    if(enterSelecao == false){
+        return
+    }
+
     if(atividade == "beber"){
         beberAgua();
     }
     if(atividade == "comer"){
+        eventoSelecaoEsquerda = false;
+        mostrarComida = true;
+        contadorComida = 1;
         clearInterval(intervaloBebe);
         $(".pixel").removeClass("preto");
-        hamburguer()
-        $(".selecao-esquerda").click(opcaoDeComida); 
-        eventoSelecaoEsquerda = false;   
-    }
- })
- 
- 
+        opcoesDeComida();
+        enterHambuguer = true;
+    }  
+          
+}
+
+   
+
+
+
+
+
+
 
 
 

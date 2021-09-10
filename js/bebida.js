@@ -15,21 +15,20 @@ function aguaFrame4(){
     aguaFrame1();
     $(".B02, .B07, .B13, .B14, .B15, .B16, .C13, .C12, .C17, .C14, .C15, .C16, .D11, .D12, .D17, .D18, .E13, .E16, .F13, .F16, .G14, .J03, .J04, .J05, .J06, .J07, .K03, .K04, .K05, .K06, .K07, .L03, .L04, .L05, .L06, .L07").toggleClass("preto");
 }
-
 function aguaFrame5(){
     aguaFrame3();
     $(".B02, .B07, .C08, .D04, .L03, .L04, .L05, .L06, .L07, .M03, .M04, .M05, .M06, .M07, .P10").toggleClass("preto");
 }
-
 function aguaFrame6(){
     aguaFrame4();
     $(".B02, .B07, .A01, .A08, .M03, .M04, .M05, .M06, .M07, .N04, .N05, .N06").toggleClass("preto");
 }
-
 function aguaFrame7(){
     aguaFrame5();
     $(".A01, .A08, .B02, .B07, .N04, .N05, .N06, .O04, .O05, .O06, .P10").toggleClass("preto");
 }
+
+
 function beberAgua(){
     contador = 13;
     var intervaloBebida = setInterval(() =>{
@@ -83,5 +82,5 @@ function beberAgua(){
     }, 1050);
 }
 
-// beberAgua();
+
 
