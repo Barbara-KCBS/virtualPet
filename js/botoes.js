@@ -1,6 +1,7 @@
 $("#esc").click(telaInicial);
 
-function telaInicial(){   
+function telaInicial(){
+    encerrarIntervalo = true;
     $(".pixel").removeClass("preto");
     frameBebeMovimento1();
     dinoBebe();

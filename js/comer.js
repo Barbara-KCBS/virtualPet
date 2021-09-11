@@ -40,6 +40,7 @@ function comerHamburguer(){
                 hamburguerFrame3();
             }
             if(contadorHamburguer == 2){
+                contadorIntervaloComida = 1;
                 hamburguerFrame3();
                 hamburguerFrame4(); 
                 if(contar < 2){
@@ -55,6 +56,7 @@ function comerHamburguer(){
                 arrotarFrame();
             }
             if((contadorHamburguer == -1 || contadorHamburguer == -3)&& contar == 2){
+                contadorIntervaloComida = 1;
                 arrotarFrame();
                 frameBebeMovimento1();
             }

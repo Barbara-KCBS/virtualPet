@@ -1,13 +1,10 @@
 var contadorComida = 1;
 var ultimaComida = false;
-
 var mostrarComida;
-
 var comida;
-
 var primeiraVez = true;
-
 var contadorIntervaloComida = 1;
+var encerrarIntervalo = false;
 
 function opcoesDeComida(){
 
@@ -22,6 +19,9 @@ function opcoesDeComida(){
             primeiraVez = false;
             var intervaloDaComida = setInterval(() => {
                 console.log(contadorIntervaloComida);
+                if(encerrarIntervalo == true){
+                    clearInterval(intervaloDaComida);
+                }
                 if(contadorIntervaloComida == 10){
                     clearInterval(intervaloDaComida);
                     telaInicial();
