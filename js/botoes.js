@@ -1,7 +1,7 @@
 $("#esc").click(telaInicial);
 
 function telaInicial(){
-    encerrarIntervalo = true;
+    encerrarIntervaloComida = true;
     $(".pixel").removeClass("preto");
     frameBebeMovimento1();
     dinoBebe();
@@ -9,5 +9,6 @@ function telaInicial(){
     enterSelecao = true;
     mostrarComida = false;
     enterHambuguer = false;
+    primeiraVez = true;
 }
 
