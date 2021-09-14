@@ -4,11 +4,13 @@ var mostrarComida;
 var comida;
 var primeiraVez = true;
 var contadorIntervaloComida = 1;
-var encerrarIntervalo = false;
+var encerrarIntervaloComida = false;
+
+var valor;
 
 function opcoesDeComida(){
-
-    console.log("contador comida: " + contadorComida);
+     
+    encerrarIntervaloComida = false;
 
     if(mostrarComida === false){
         return
@@ -16,67 +18,99 @@ function opcoesDeComida(){
 
     else{
         if(primeiraVez == true){
+
             primeiraVez = false;
+
             var intervaloDaComida = setInterval(() => {
-                console.log(contadorIntervaloComida);
-                if(encerrarIntervalo == true){
+
+                if(encerrarIntervaloComida == true){
                     clearInterval(intervaloDaComida);
+                    ultimaComida = false;
                 }
+
                 if(contadorIntervaloComida == 10){
                     clearInterval(intervaloDaComida);
                     telaInicial();
                     primeiraVez = true;
+                    ultimaComida = false;
+                    enterHamburguer = false;
+                    enterMacarrao = false;
+                    enterSorvete = false;
+                    enterCenoura = false;
+                    enterMaca = false;
+                    enterCoxa = false;
                 }
+
                 contadorIntervaloComida += 1;
             }, 1000);
         }
+
         if(contadorComida == 1 && ultimaComida == false){
             contadorIntervaloComida = 1;
-            hamburguer();
+            hamburguerFrame1();
             comida = "hamburguer";
+            enterHamburguer = true;
+ 
         }
         
         if(contadorComida == 1 && ultimaComida == true){
             contadorIntervaloComida = 1;
-            coxa();
-            hamburguer();
+            coxaFrame1();
+            hamburguerFrame1();
             comida = "hamburguer";
+            enterCoxa = false;
+            enterHamburguer = true;
             ultimaComida = false;
         }
+
         if(contadorComida == 2){
             contadorIntervaloComida = 1;
-            hamburguer();
-            macarrao();
+            hamburguerFrame1();
+            macarraoFrame1();
             comida = "macarrao";
+            enterHamburguer = false;
+            enterMacarrao = true;
         }
     
         if(contadorComida == 3){
             contadorIntervaloComida = 1;
-            macarrao();
-            sorvete();
+            macarraoFrame1();
+            sorveteFrame1();
             comida = "sorvete"
+            enterMacarrao = false;
+            enterSorvete = true;
         }
+
         if(contadorComida == 4){
             contadorIntervaloComida = 1;
-            sorvete();
-            cenoura();
+            sorveteFrame1();
+            cenouraFrame1();
             comida = "cenoura"
+            enterSorvete = false;
+            enterCenoura = true;
         }
+
         if(contadorComida == 5){
             contadorIntervaloComida = 1;
-            cenoura();
-            maca();
+            cenouraFrame1();
+            macaFrame1()
             comida = "maca"
+            enterCenoura = false;
+            enterMaca = true;
         }
+
         if(contadorComida == 6){
             contadorIntervaloComida = 1;
-            maca();
-            coxa();
+            macaFrame1()
+            coxaFrame1();
             comida = "coxa"
             contadorComida -= 6;
             ultimaComida = true;
+            enterMaca = false;
+            enterCoxa = true;
         }
-    
+
+        console.log("comida: " + comida);
         contadorComida += 1;
     }
 }
