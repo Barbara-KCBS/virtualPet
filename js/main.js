@@ -7,6 +7,16 @@ $(".selecao-esquerda").click(percorrerOpcoesDeComida);
 
 $("#enter").click(comerHamburguer);
 
+$("#enter").click(comerMacarrao);
+
+$("#enter").click(comerCoxa);
+
+$("#enter").click(comerSorvete);
+
+$("#enter").click(comerCenoura);
+
+$("#enter").click(comerMaca);
+
 $("#enter").click(selecaoDeAtividade);
 
 var enterSelecao = true;
@@ -18,19 +28,18 @@ function selecaoDeAtividade(){
         return
     }
 
-    if(atividade == "beber"){
+    if(atividade === "beber"){
         beberAgua();
     }
-    if(atividade == "comer"){
+    if(atividade === "comer"){
         eventoSelecaoEsquerda = false;
         mostrarComida = true;
         contadorComida = 1;
         clearInterval(intervaloBebe);
         $(".pixel").removeClass("preto");
         opcoesDeComida();
-        enterHambuguer = true;
-    }  
-          
+        enterSelecao = false;
+    }           
 }
 
    
