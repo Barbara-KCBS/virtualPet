@@ -39,7 +39,10 @@ function selecaoDeAtividade(){
         $(".pixel").removeClass("preto");
         opcoesDeComida();
         enterSelecao = false;
-    }           
+    }    
+    if(atividade === "carinho"){
+        dinoCarinho();
+    }
 }
 
    
