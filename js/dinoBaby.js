@@ -18,11 +18,7 @@ function dinoBebe() {
         
         var contador = 5;
         intervaloBebe = setInterval(() => {
-        console.log(contador);
-        // if(contador == 6){
-        //     $(".pixel").removeClass("preto");
-        //     frameBebeMovimento1();
-        // }
+
         if(contador == 5){
                 frameBebeMovimento1();
                 frameBebeMovimento2();
