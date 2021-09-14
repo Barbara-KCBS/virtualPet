@@ -5,6 +5,8 @@ $(".selecao-esquerda").click(percorrerAtividadesDaEsquerda);
 
 $(".selecao-esquerda").click(percorrerOpcoesDeComida);
 
+$(".selecao-esquerda").click(percorrerNecessidades);
+
 $("#enter").click(comerHamburguer);
 
 $("#enter").click(comerMacarrao);
@@ -42,6 +44,16 @@ function selecaoDeAtividade(){
     }    
     if(atividade === "carinho"){
         dinoCarinho();
+    }
+
+    if(atividade == "necessidades"){
+        eventoSelecaoEsquerda = false;
+        mostrarNecessidade = true;
+        contadorNecessidades = 1;
+        clearInterval(intervaloBebe);
+        $(".pixel").removeClass("preto");
+        necessidadesDoDino();
+        enterSelecao = false;
     }
 }
 
