@@ -23,7 +23,8 @@ function comerSorvete(){
     if(enterSorvete === false){
         return
     }
-    
+    enterSorvete = false;
+
     let contadorSorvete = 1;  
     let repetir = true;
     
@@ -62,6 +63,7 @@ function comerSorvete(){
             contadorIntervaloComida = 1;
             $(".pixel").removeClass("preto");
             sorveteFrame1();
+            enterSorvete = true;
         }
        
         contadorSorvete ++;
