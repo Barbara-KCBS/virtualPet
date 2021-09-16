@@ -13,7 +13,6 @@ var eventoSelecaoEsquerda = true;
 
 var atividade;
 
-
 function percorrerAtividadesDaEsquerda(){
      
     if(eventoSelecaoEsquerda == false){
@@ -67,7 +66,7 @@ function percorrerAtividadesDaEsquerda(){
     
 }
 
-
+$(".selecao-esquerda").click(percorrerAtividadesDaEsquerda);  
 
 
 

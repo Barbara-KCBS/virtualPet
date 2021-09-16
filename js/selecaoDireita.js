@@ -11,8 +11,13 @@ var ultimaAtividadeDireita = false;
 
 var atividade;
 
-function selecaoDireita(){
+var eventoSelecaoDireita = true;
 
+function selecaoDireita(){
+    
+    if(eventoSelecaoDireita == false){
+        return
+    }
    
     $(".atividade-esquerda").hide();
 
@@ -57,14 +62,6 @@ function selecaoDireita(){
 
 $(".selecao-direita").click(selecaoDireita);
 
-// $("#enter").click(()=>{
-//     if(atividade == "beber"){
-//         beberAgua();
-//     }
-//     if(atividade == "comer"){
-//         comerHamburguer();
-//     }
-// })
 
 
 
