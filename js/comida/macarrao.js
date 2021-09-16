@@ -6,8 +6,6 @@ function macarraoFrame2(){
 }
 
 var enterMacarrao = false;
-console.log("enter macarrao: " + enterMacarrao)
-
 
 function comerMacarrao(){
 
@@ -16,7 +14,8 @@ function comerMacarrao(){
     if(enterMacarrao == false){
         return
     }
-    
+    enterMacarrao = false;
+
     let contadorMacarrao = 1;  
     
     let intervaloMacarrao = setInterval(() =>{
@@ -37,7 +36,8 @@ function comerMacarrao(){
                 clearInterval(intervaloMacarrao);
                 contadorIntervaloComida = 1;
                 $(".pixel").removeClass("preto");
-                macarraoFrame1();    
+                macarraoFrame1();  
+                enterMacarrao = true;  
             }
    
 
