@@ -55,6 +55,9 @@ function selecaoDeAtividade(){
         clearInterval(intervaloBebe);
         luzOpcaoOn();
     }
+    if(atividade === "estudar"){
+       dinoEstudando();
+    }
 }
 
    
