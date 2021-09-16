@@ -24,6 +24,8 @@ function comerCoxa(){
         return
     }
     
+    enterCoxa = false;
+
     let contadorCoxa = 1;  
     let repetir = true;
     
@@ -62,6 +64,7 @@ function comerCoxa(){
             contadorIntervaloComida = 1;
             $(".pixel").removeClass("preto");
             coxaFrame1();
+            enterCoxa = true;
         }
        
         contadorCoxa ++;
