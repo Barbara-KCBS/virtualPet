@@ -28,9 +28,7 @@ function opcoesDeComida(){
                     ultimaComida = false;
                 }
 
-                if(contadorIntervaloComida == 10){
-                    clearInterval(intervaloDaComida);
-                    telaInicial();
+                if(contadorIntervaloComida == 10){ 
                     primeiraVez = true;
                     ultimaComida = false;
                     enterHamburguer = false;
@@ -39,8 +37,16 @@ function opcoesDeComida(){
                     enterCenoura = false;
                     enterMaca = false;
                     enterCoxa = false;
+                    mostrarComida = false;
+                    clearInterval(intervaloDaComida);
+                    if(luzDesligada === false){
+                        telaInicial();
+                    }
+                    if(luzDesligada === true){
+                        telaInicialApagada();
+                    }
                 }
-
+                console.log("contador intervalo comida: "+ contadorIntervaloComida);
                 contadorIntervaloComida += 1;
             }, 1000);
         }
@@ -50,6 +56,7 @@ function opcoesDeComida(){
             hamburguerFrame1();
             comida = "hamburguer";
             enterHamburguer = true;
+            
  
         }
         
@@ -61,6 +68,7 @@ function opcoesDeComida(){
             enterCoxa = false;
             enterHamburguer = true;
             ultimaComida = false;
+            
         }
 
         if(contadorComida == 2){
@@ -70,6 +78,7 @@ function opcoesDeComida(){
             comida = "macarrao";
             enterHamburguer = false;
             enterMacarrao = true;
+            
         }
     
         if(contadorComida == 3){
@@ -79,6 +88,7 @@ function opcoesDeComida(){
             comida = "sorvete"
             enterMacarrao = false;
             enterSorvete = true;
+            
         }
 
         if(contadorComida == 4){
@@ -88,6 +98,7 @@ function opcoesDeComida(){
             comida = "cenoura"
             enterSorvete = false;
             enterCenoura = true;
+            
         }
 
         if(contadorComida == 5){
@@ -97,6 +108,7 @@ function opcoesDeComida(){
             comida = "maca"
             enterCenoura = false;
             enterMaca = true;
+            
         }
 
         if(contadorComida == 6){
@@ -108,9 +120,9 @@ function opcoesDeComida(){
             ultimaComida = true;
             enterMaca = false;
             enterCoxa = true;
+           
         }
-
-        console.log("comida: " + comida);
+        
         contadorComida += 1;
     }
 }
@@ -123,3 +135,5 @@ function percorrerOpcoesDeComida(){
         return
     }
 }
+
+$(".selecao-esquerda").click(percorrerOpcoesDeComida);
