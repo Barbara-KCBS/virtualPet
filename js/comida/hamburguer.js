@@ -14,7 +14,6 @@ function hamburguerFrame4(){
 }
 
 var enterHamburguer = false;
-console.log("enter hamburguer: " + enterHamburguer)
 
 function comerHamburguer(){
 
@@ -23,6 +22,8 @@ function comerHamburguer(){
     if(enterHamburguer === false){
         return
     }
+
+    enterHamburguer = false;
     
     let contadorHamburguer = 1;  
     let repetir = true;
@@ -54,6 +55,7 @@ function comerHamburguer(){
             contadorIntervaloComida = 1;
             hamburguerFrame4();
             hamburguerFrame1();
+            enterHamburguer = true;
         }
        
         contadorHamburguer ++;
