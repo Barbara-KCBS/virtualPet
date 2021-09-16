@@ -52,11 +52,17 @@ function necessidadesDoDino(){
                 }
 
                 if(contadorIntervaloNecessidade == 10){
-                    clearInterval(intervaloDaNecessidade);
-                    telaInicial();
                     primeiraVez = true;
                     ultimaNecessidade = false;
                     mostrarNecessidade = false;
+                    clearInterval(intervaloDaNecessidade);
+                    if(luzDesligada === false){
+                        telaInicial();
+                    }
+                    if(luzDesligada === true){
+                        telaInicialApagada();
+                    }
+                    
                 }
 
                 contadorIntervaloNecessidade += 1;
@@ -113,7 +119,7 @@ function necessidadesDoDino(){
             contadorNecessidades -= 6;
             ultimaNecessidade = true;
         }
-        console.log(contadorNecessidades);
+       
         contadorNecessidades += 1;
 
     }
@@ -127,3 +133,6 @@ function percorrerNecessidades(){
         return
     }
 }
+
+
+$(".selecao-esquerda").click(percorrerNecessidades);
