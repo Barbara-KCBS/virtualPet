@@ -1,25 +1,15 @@
 
 $("#iniciar-jogo").click(comecarJogo);
 
-$(".selecao-esquerda").click(percorrerAtividadesDaEsquerda);  
-
-$(".selecao-esquerda").click(percorrerOpcoesDeComida);
-
-$(".selecao-esquerda").click(percorrerNecessidades);
-
 $("#enter").click(comerHamburguer);
-
 $("#enter").click(comerMacarrao);
-
+$("#enter").click(comerSorvete);
+$("#enter").click(comerCenoura);
+$("#enter").click(comerMaca);
 $("#enter").click(comerCoxa);
 
-$("#enter").click(comerSorvete);
-
-$("#enter").click(comerCenoura);
-
-$("#enter").click(comerMaca);
-
 $("#enter").click(selecaoDeAtividade);
+
 
 var enterSelecao = true;
 
@@ -54,6 +44,16 @@ function selecaoDeAtividade(){
         $(".pixel").removeClass("preto");
         necessidadesDoDino();
         enterSelecao = false;
+    }
+    if(atividade == "luz"){
+        eventoSelecaoEsquerda = false;
+        eventoSelecaoDireita = false;
+        enterSelecao = false;
+        telaLuzOn = true;
+        tempoDeTelaLuzOn = true;
+        enterLuz = true;
+        clearInterval(intervaloBebe);
+        luzOpcaoOn();
     }
 }
 
