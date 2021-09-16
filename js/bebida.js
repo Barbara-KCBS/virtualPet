@@ -30,31 +30,32 @@ function aguaFrame7(){
 
 
 function beberAgua(){
-    contador = 13;
+    enterSelecao = false;
+    contador = 1;
     var intervaloBebida = setInterval(() =>{
         console.log(contador);
-        if(contador == 13){
+        if(contador == 1){
             clearInterval(intervaloBebe);
             $(".pixel").removeClass("preto");
             aguaFrame1();
         }
-        if(contador == 12){
+        if(contador == 2){
             aguaFrame1();
             aguaFrame2();
         }
-        if(contador == 11){
+        if(contador == 3){
             aguaFrame2();
             aguaFrame3();
         }
-        if(contador == 10){
+        if(contador == 4){
             aguaFrame3();
             aguaFrame4();
         }
-        if(contador == 9){
+        if(contador == 5){
             aguaFrame4();
             aguaFrame5();
         }
-        if(contador == 8){
+        if(contador == 6){
             aguaFrame5();
             aguaFrame6();
         }
@@ -62,23 +63,27 @@ function beberAgua(){
             aguaFrame6();
             aguaFrame7();
         }
-        if(contador == 6){
+        if(contador == 8){
             aguaFrame7();
             frameBebeMovimento1();
         }
-        if(contador == 5 || contador == 3){
-            frameBebeMovimento1();
+        if(contador > 8 && contador <= 11){
             arrotarFrame();
         }
-        if(contador == 4 || contador == 2){
+        if(contador == 12 && luzDesligada === false){
             arrotarFrame();
-            frameBebeMovimento1();
-        }
-        if(contador == 1){
             dinoBebe();          
             clearInterval(intervaloBebida);
+            enterSelecao = true;
         }  
-        contador -= 1;
+
+        if(contador == 12 && luzDesligada === true){
+            arrotarFrame();
+            telaInicialApagada();         
+            clearInterval(intervaloBebida);
+            enterSelecao = true;
+        }  
+        contador += 1;
     }, 1050);
 }
 
