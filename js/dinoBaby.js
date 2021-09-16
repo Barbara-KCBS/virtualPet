@@ -45,7 +45,3 @@ function dinoBebe() {
     }, 1000);
 
 }
-
-
-// dinoBebe();
-
