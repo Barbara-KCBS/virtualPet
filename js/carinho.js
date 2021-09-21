@@ -21,7 +21,6 @@ function dinoCarinho(){
         }
         if(contadorCarinho === 3 && luzDesligada === false){
             clearInterval(intervaloCarinho);
-            $(".pixel").removeClass("preto");
             telaInicial();      
         }  
         if(contadorCarinho === 3 && luzDesligada === true){
