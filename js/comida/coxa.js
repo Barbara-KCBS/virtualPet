@@ -17,7 +17,8 @@ function coxaFrame4(){
 var enterCoxa = false;
 
 function comerCoxa(){
-
+    
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterCoxa === false){
@@ -65,6 +66,7 @@ function comerCoxa(){
             $(".pixel").removeClass("preto");
             coxaFrame1();
             enterCoxa = true;
+            percorrerComida = true;
         }
        
         contadorCoxa ++;

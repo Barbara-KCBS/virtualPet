@@ -16,7 +16,8 @@ function hamburguerFrame4(){
 var enterHamburguer = false;
 
 function comerHamburguer(){
-
+    
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterHamburguer === false){
@@ -56,6 +57,7 @@ function comerHamburguer(){
             hamburguerFrame4();
             hamburguerFrame1();
             enterHamburguer = true;
+            percorrerComida = true;
         }
        
         contadorHamburguer ++;

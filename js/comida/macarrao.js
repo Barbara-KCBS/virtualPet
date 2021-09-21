@@ -8,7 +8,8 @@ function macarraoFrame2(){
 var enterMacarrao = false;
 
 function comerMacarrao(){
-
+    
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterMacarrao == false){
@@ -37,7 +38,8 @@ function comerMacarrao(){
                 contadorIntervaloComida = 1;
                 $(".pixel").removeClass("preto");
                 macarraoFrame1();  
-                enterMacarrao = true;  
+                enterMacarrao = true;
+                percorrerComida = true;  
             }
    
 

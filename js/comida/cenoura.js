@@ -17,7 +17,8 @@ function cenouraFrame4(){
 var enterCenoura = false;
 
 function comerCenoura(){
-
+    
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterCenoura === false){
@@ -64,6 +65,7 @@ function comerCenoura(){
             $(".pixel").removeClass("preto");
             cenouraFrame1();
             enterCenoura = true;
+            percorrerComida = true;
         }
        
         contadorCenoura ++;

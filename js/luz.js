@@ -2,7 +2,6 @@ var contadorIntervaloLuzOn = 1;
 var tempoDeTelaLuzOn = false;
 var telaLuzOn = false;
 
-
 var contadorIntervaloLuzOff = 1; 
 var tempoDeTelaLuzOff = false;
 var telaLuzOff = false;
@@ -65,6 +64,7 @@ function luzOpcaoOn(){
     if(telaLuzOff === false){
          return
     }
+    
     tempoDeTelaLuzOff = true;
     tempoDeTelaLuzOn = false;
     telaLuzOn = true;
@@ -96,6 +96,7 @@ function luzOpcaoOn(){
      $("#enter").click(()=>{
          if(desligarLuz === true){ 
              telaLuzOn = false;
+             telaLuzOff = false;
              telaInicialApagada();
          }
      });

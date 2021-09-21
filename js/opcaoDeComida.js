@@ -5,6 +5,7 @@ var comida;
 var primeiraVez = true;
 var contadorIntervaloComida = 1;
 var encerrarIntervaloComida = false;
+var percorrerComida = true;
 
 var valor;
 
@@ -128,7 +129,7 @@ function opcoesDeComida(){
 }
 
 function percorrerOpcoesDeComida(){
-    if(mostrarComida == true){
+    if(mostrarComida == true && percorrerComida === true){
         opcoesDeComida();
     }
     else{

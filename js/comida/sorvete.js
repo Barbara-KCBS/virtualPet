@@ -17,7 +17,8 @@ function sorveteFrame4(){
 var enterSorvete = false;
 
 function comerSorvete(){
-
+     
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterSorvete === false){
@@ -64,6 +65,7 @@ function comerSorvete(){
             $(".pixel").removeClass("preto");
             sorveteFrame1();
             enterSorvete = true;
+            percorrerComida = true;
         }
        
         contadorSorvete ++;

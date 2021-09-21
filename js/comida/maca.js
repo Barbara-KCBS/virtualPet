@@ -13,7 +13,8 @@ function macaFrame1(){
  var enterMaca = false;
 
 function comerMaca(){
-
+    
+    percorrerComida = false;
     contadorIntervaloComida = 1;
 
     if(enterMaca === false){
@@ -56,6 +57,7 @@ function comerMaca(){
             $(".pixel").removeClass("preto");
             macaFrame1();
             enterMaca = true;
+            percorrerComida = true;
         }
        
         contadorMaca ++;
