@@ -26,7 +26,6 @@ function dinoBebeRaiva(){
         }
         if(contadorFelicidade === 5 && luzDesligada === false){
             clearInterval(intervaloFelicidade);
-            $(".pixel").removeClass("preto");
             telaInicial();      
         }  
         if(contadorFelicidade === 5 && luzDesligada === true){
