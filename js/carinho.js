@@ -7,7 +7,7 @@ function carinhoFrame2(){
 }
 
 function dinoCarinho(){
-    enterSelecao = false;
+    
     contadorCarinho = 1;
 
     var intervaloCarinho = setInterval(() =>{
@@ -22,16 +22,14 @@ function dinoCarinho(){
         if(contadorCarinho === 3 && luzDesligada === false){
             clearInterval(intervaloCarinho);
             $(".pixel").removeClass("preto");
-            frameBebeMovimento1();
-            dinoBebe();          
+            telaInicial();      
         }  
         if(contadorCarinho === 3 && luzDesligada === true){
             clearInterval(intervaloCarinho);
             telaInicialApagada(); 
-            enterSelecao = true;  
         }  
 
         contadorCarinho += 1;
-    }, 1050);
+    }, 1500);
 }
 
