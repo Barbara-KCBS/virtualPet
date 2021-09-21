@@ -1,5 +1,5 @@
 
-$("#iniciar-jogo").click(comecarJogo);
+$("#iniciar-jogo").click(chocarOvo);
 
 $("#enter").click(comerHamburguer);
 $("#enter").click(comerMacarrao);
@@ -19,6 +19,9 @@ function habilitarEventosIniciais(valor){
     enterSelecao = valor;
 }
 
+function desligarTodosOsPixels(){
+    $(".pixel").removeClass("preto");
+}
 
 function selecaoDeAtividade(){
 
@@ -35,8 +38,9 @@ function selecaoDeAtividade(){
         mostrarComida = true;
         percorrerComida = true;
         contadorComida = 1;
+        iniciarIntervaloComida = true;
         clearInterval(intervaloBebe);
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels()
         opcoesDeComida();
     }    
     if(atividade === "carinho"){
@@ -48,8 +52,9 @@ function selecaoDeAtividade(){
         habilitarEventosIniciais(false);;
         mostrarNecessidade = true;
         contadorNecessidades = 1;
+        iniciarIntervaloNecessidades = true;
         clearInterval(intervaloBebe);
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels()
         necessidadesDoDino();
     }
     if(atividade == "luz"){
@@ -70,7 +75,7 @@ function selecaoDeAtividade(){
         percorrerJogo = true;
         contadorJogor = 1;
         clearInterval(intervaloBebe);
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels()
         escolhaDoJogador();
     }   
 

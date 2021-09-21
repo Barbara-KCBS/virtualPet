@@ -21,7 +21,7 @@ function dinoBebeInjeçaoFrame1(){
     var intervaloMedicar = setInterval(() =>{
         if(contadorMedicar === 1){
             clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             dinoBebeInjeçaoFrame1();
         }
         if(contadorMedicar === 2){

@@ -36,7 +36,7 @@ function beberAgua(){
         console.log(contador);
         if(contador == 1){
             clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             aguaFrame1();
         }
         if(contador == 2){

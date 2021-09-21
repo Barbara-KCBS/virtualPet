@@ -26,7 +26,7 @@ var contadorNecessidades = 1;
 var ultimaNecessidade= false;
 var mostrarNecessidade;
 var necessidade;
-var primeiraVez = true;
+var iniciarIntervaloNecessidades = false;
 var contadorIntervaloNecessidade = 1;
 var encerrarIntervaloNecessidade = false;
 
@@ -40,9 +40,9 @@ function necessidadesDoDino(){
     } 
 
     else{
-        if(primeiraVez == true){
+        if(iniciarIntervaloNecessidades == true){
 
-            primeiraVez = false;
+            iniciarIntervaloNecessidades = false;
 
             var intervaloDaNecessidade = setInterval(() => {
 
@@ -52,9 +52,11 @@ function necessidadesDoDino(){
                 }
 
                 if(contadorIntervaloNecessidade == 10){
-                    primeiraVez = true;
+                    
+                    iniciarIntervaloNecessidades = true;
                     ultimaNecessidade = false;
                     mostrarNecessidade = false;
+
                     clearInterval(intervaloDaNecessidade);
                     if(luzDesligada === false){
                         telaInicial();

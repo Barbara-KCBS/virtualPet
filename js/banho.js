@@ -22,11 +22,13 @@ function banharDino(){
     contadorBanho = 1;
 
     var intervaloBanho = setInterval(() =>{
+        
         if(contadorBanho === 1){
             clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             banhoFrame1();
         }
+
         if(contadorBanho === 2){
             banhoFrame1();
             banhoFrame2();

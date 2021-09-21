@@ -13,7 +13,7 @@ function dinoEstudando(){
     var intervaloEstudando = setInterval(() =>{
         if(contadorEstudando === 1){
             clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             estudandoFrame1();
         }
         if(contadorEstudando > 1 && contadorEstudando <= 4){
@@ -21,7 +21,7 @@ function dinoEstudando(){
         }
         if(contadorEstudando === 5 && luzDesligada === false){
             clearInterval(intervaloEstudando);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             telaInicial();
             eventoSelecaoEsquerda = true;
             eventoSelecaoDireita = true;        

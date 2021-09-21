@@ -26,7 +26,7 @@ function comerMacarrao(){
             }
             if(contadorMacarrao === 8){
                 contadorIntervaloComida = 1;
-                $(".pixel").removeClass("preto");
+                desligarTodosOsPixels()
                 frameBebeMovimento1();
             }
             if(contadorMacarrao > 8 && contadorMacarrao <= 11){
@@ -36,7 +36,7 @@ function comerMacarrao(){
             if(contadorMacarrao === 12){
                 clearInterval(intervaloMacarrao);
                 contadorIntervaloComida = 1;
-                $(".pixel").removeClass("preto");
+                desligarTodosOsPixels()
                 macarraoFrame1();  
                 enterMacarrao = true;
                 percorrerComida = true;  

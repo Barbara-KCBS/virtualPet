@@ -1,7 +1,7 @@
 $("#esc").click(telaInicial);
 
 function telaInicial(){
-    $(".pixel").removeClass("preto");
+    desligarTodosOsPixels();
     frameBebeMovimento1();
     dinoBebe();
     habilitarEventosIniciais(true);

@@ -44,14 +44,14 @@ function comerSorvete(){
 
         if(contadorSorvete == 4 && repetir == true){
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             sorveteFrame1();
             contadorSorvete = 0;
             repetir = false;
         }
 
         if(contadorSorvete == 4 && repetir == false){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             frameBebeMovimento1();
         }
 
@@ -62,7 +62,7 @@ function comerSorvete(){
         if(contadorSorvete == 8){
             clearInterval(intervaloSorvete);
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             sorveteFrame1();
             enterSorvete = true;
             percorrerComida = true;

@@ -2,7 +2,7 @@ var contadorComida = 1;
 var ultimaComida = false;
 var mostrarComida;
 var comida;
-var primeiraVez = true;
+var iniciarIntervaloComida = false;
 var contadorIntervaloComida = 1;
 var encerrarIntervaloComida = false;
 var percorrerComida = true;
@@ -18,9 +18,9 @@ function opcoesDeComida(){
     } 
 
     else{
-        if(primeiraVez == true){
+        if(iniciarIntervaloComida == true){
 
-            primeiraVez = false;
+            iniciarIntervaloComida = false;
 
             var intervaloDaComida = setInterval(() => {
 
@@ -30,7 +30,7 @@ function opcoesDeComida(){
                 }
 
                 if(contadorIntervaloComida == 10){ 
-                    primeiraVez = true;
+                    iniciarIntervaloComida = true;
                     ultimaComida = false;
                     enterHamburguer = false;
                     enterMacarrao = false;

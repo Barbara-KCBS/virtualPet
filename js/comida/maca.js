@@ -36,14 +36,14 @@ function comerMaca(){
 
         if(contadorMaca == 3 && repetir == true){
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             macaFrame1();
             contadorMaca = 0;
             repetir = false;
         }
 
         if(contadorMaca == 3 && repetir == false){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             frameBebeMovimento1();
         }
 
@@ -54,7 +54,7 @@ function comerMaca(){
         if(contadorMaca == 7){
             clearInterval(intervaloMaca);
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             macaFrame1();
             enterMaca = true;
             percorrerComida = true;

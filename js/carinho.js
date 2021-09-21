@@ -13,7 +13,7 @@ function dinoCarinho(){
     var intervaloCarinho = setInterval(() =>{
         if(contadorCarinho === 1){
             clearInterval(intervaloBebe);
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             carinhoFrame1();
         }
         if(contadorCarinho === 2){

@@ -30,11 +30,11 @@ function dinoVenceu(){
 
      const intervaloReacaoDino = setInterval(()=>{
             if(contadorReacao === 1){
-                $(".pixel").removeClass("preto");
+                desligarTodosOsPixels();
                 frameBebeMovimento1();
             }
             if(contadorReacao === 2){
-                frameBebeMovimento1()
+                frameBebeMovimento1();
                 dinoBebeFeliz();
             }
             if(contadorReacao === 3){
@@ -47,7 +47,7 @@ function dinoVenceu(){
             }
             if(contadorReacao === 5){
                 clearInterval(intervaloReacaoDino);
-                $(".pixel").removeClass("preto");
+                desligarTodosOsPixels();
                 escolhaDoJogador();
                 reacaoDino = false; 
             }
@@ -61,15 +61,15 @@ function dinoNaoVenceu(){
 
     const intervaloReacaoDino = setInterval(()=>{
         if(contadorReacao === 1){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             frameBebeMovimento1();
         }
         if(contadorReacao === 2){
-            frameBebeMovimento1()
+            frameBebeMovimento1();
             dinoBebeRaiva();
         }
         if(contadorReacao === 3){
-            frameBebeMovimento1()
+            frameBebeMovimento1();
             dinoBebeRaiva();
         }
         if(contadorReacao === 4){
@@ -111,25 +111,25 @@ function compararLances(){
     }
 
     if(lanceJogador === "papel" && lanceDino === "tesoura"){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         dinoTesoura();
         dinoVenceu();
         contadorJogador = 1;
     }
     if(lanceJogador === "pedra" && lanceDino === "papel"){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         dinoPapel();
         dinoVenceu();
         contadorJogador = 1;
     }
     if(lanceJogador === "tesoura" && lanceDino === "pedra"){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         dinoPedra();
         dinoVenceu();
         contadorJogador = 1;
     }
     if(lanceJogador === "papel" && (lanceDino === "pedra" || lanceDino === lanceJogador)){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         if(lanceDino === "papel"){
             dinoPapel();
         }
@@ -143,7 +143,7 @@ function compararLances(){
         contadorJogador = 1;
     }
     if(lanceJogador === "pedra" && (lanceDino === "tesoura" || lanceDino === lanceJogador)){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         if(lanceDino === "papel"){
             dinoPapel();
         }
@@ -157,7 +157,7 @@ function compararLances(){
         contadorJogador = 1;
     }
     if(lanceJogador === "tesoura" && (lanceDino === "papel" || lanceDino === lanceJogador)){
-        $(".pixel").removeClass("preto");
+        desligarTodosOsPixels();
         if(lanceDino === "papel"){
             dinoPapel();
         }
@@ -237,7 +237,7 @@ function escolhaDoJogador(){
                 if(contadorInicioDoJogo === 2){
                     clearInterval(intavaloDoInicioDoJogo);
                     contadorIntervaloJogador = 1;
-                    $(".pixel").removeClass("preto");
+                    desligarTodosOsPixels();
                     jogadorPapel();
                     lanceJogador = "papel";  
                     iniciarJogo = false;
@@ -247,14 +247,14 @@ function escolhaDoJogador(){
         }
         if(contadorJogador === 1 && ultimaOpcao === false && iniciarJogo === false){
             contadorIntervaloJogador = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             jogadorPapel();
             lanceJogador = "papel";
         }
         
         if(contadorJogador == 1 && ultimaOpcao == true){
             contadorIntervaloJogador = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             jogadorPapel();
             lanceJogador = "papel";        
             ultimaOpcao = false;         

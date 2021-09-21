@@ -31,7 +31,7 @@ function comerCoxa(){
     let repetir = true;
     
     let intervaloCoxa = setInterval(() =>{
-    console.log("contador coxa: " + contadorCoxa);
+    
         if(contadorCoxa == 1){
             coxaFrame2();
         }
@@ -45,14 +45,14 @@ function comerCoxa(){
 
         if(contadorCoxa == 4 && repetir == true){
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             coxaFrame1();
             contadorCoxa = 0;
             repetir = false;
         }
 
         if(contadorCoxa == 4 && repetir == false){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             frameBebeMovimento1();
         }
 
@@ -63,7 +63,7 @@ function comerCoxa(){
         if(contadorCoxa == 8){
             clearInterval(intervaloCoxa);
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             coxaFrame1();
             enterCoxa = true;
             percorrerComida = true;

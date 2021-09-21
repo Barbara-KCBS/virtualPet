@@ -17,7 +17,7 @@ function dinoBebeRaiva(){
 
     const intervaloFelicidade = setInterval(()=>{
         if(contadorFelicidade === 1 || contadorFelicidade === 3){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels();
             frameBebeMovimento1();
         }
         if(contadorFelicidade === 2 || contadorFelicidade === 4){

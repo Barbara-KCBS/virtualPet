@@ -23,7 +23,7 @@ function luzOpcaoOn(){
     let enterLuzOn = true;
 
     console.log("luz desligada " + luzDesligada);
-    $(".pixel").removeClass("preto");
+    desligarTodosOsPixels();
 
     let intervaloLuzOn = setInterval(()=>{
 
@@ -70,7 +70,7 @@ function luzOpcaoOn(){
     telaLuzOn = true;
     desligarLuz = true;
    
-    $(".pixel").removeClass("preto");
+    desligarTodosOsPixels();
   
     let intervaloLuzOff = setInterval(()=>{
         if(tempoDeTelaLuzOff === false){

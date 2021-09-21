@@ -44,14 +44,14 @@ function comerCenoura(){
 
         if(contadorCenoura == 4 && repetir == true){
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             cenouraFrame1();
             contadorCenoura = 0;
             repetir = false;
         }
 
         if(contadorCenoura == 4 && repetir == false){
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             frameBebeMovimento1();
         }
 
@@ -62,7 +62,7 @@ function comerCenoura(){
         if(contadorCenoura == 8){
             clearInterval(intervaloCenoura);
             contadorIntervaloComida = 1;
-            $(".pixel").removeClass("preto");
+            desligarTodosOsPixels()
             cenouraFrame1();
             enterCenoura = true;
             percorrerComida = true;
