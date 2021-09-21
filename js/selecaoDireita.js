@@ -42,16 +42,19 @@ function selecaoDireita(){
     if(contadorSelecaoDireita == 3){
         estudo.hide();
         banho.show();
+        atividade = "banhar";
         contadorSelecaoEsquerda  = 3;
     }
     if(contadorSelecaoDireita == 4){
         banho.hide(); 
         ar.show(); 
+        atividade = "ar-condicionado";
         contadorSelecaoEsquerda  = 4;
     }
     if(contadorSelecaoDireita == 5){
         ar.hide();
         medico.show();
+        atividade = "medicar";
         contadorSelecaoDireita -= 5;
         ultimaAtividadeDireita = true;
         contadorSelecaoEsquerda  = 5;
