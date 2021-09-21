@@ -30,7 +30,7 @@ function aguaFrame7(){
 
 
 function beberAgua(){
-    enterSelecao = false;
+    
     contador = 1;
     var intervaloBebida = setInterval(() =>{
         console.log(contador);
@@ -71,17 +71,17 @@ function beberAgua(){
             arrotarFrame();
         }
         if(contador == 12 && luzDesligada === false){
-            arrotarFrame();
-            dinoBebe();          
             clearInterval(intervaloBebida);
-            enterSelecao = true;
+            arrotarFrame();
+            telaInicial();
+                  
         }  
 
         if(contador == 12 && luzDesligada === true){
+            clearInterval(intervaloBebida);
             arrotarFrame();
             telaInicialApagada();         
-            clearInterval(intervaloBebida);
-            enterSelecao = true;
+            
         }  
         contador += 1;
     }, 1050);
