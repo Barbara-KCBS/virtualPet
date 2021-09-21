@@ -13,6 +13,12 @@ $("#enter").click(selecaoDeAtividade);
 
 var enterSelecao = true;
 
+function habilitarEventosIniciais(valor){
+    eventoSelecaoEsquerda = valor;
+    eventoSelecaoDireita = valor;
+    enterSelecao = valor;
+}
+
 
 function selecaoDeAtividade(){
 
@@ -21,34 +27,33 @@ function selecaoDeAtividade(){
     }
 
     if(atividade === "beber"){
+        habilitarEventosIniciais(false);
         beberAgua();
     }
     if(atividade === "comer"){
-        eventoSelecaoEsquerda = false;
+        habilitarEventosIniciais(false);
         mostrarComida = true;
+        percorrerComida = true;
         contadorComida = 1;
         clearInterval(intervaloBebe);
         $(".pixel").removeClass("preto");
         opcoesDeComida();
-        enterSelecao = false;
     }    
     if(atividade === "carinho"){
+        habilitarEventosIniciais(false);;
         dinoCarinho();
     }
 
     if(atividade == "necessidades"){
-        eventoSelecaoEsquerda = false;
+        habilitarEventosIniciais(false);;
         mostrarNecessidade = true;
         contadorNecessidades = 1;
         clearInterval(intervaloBebe);
         $(".pixel").removeClass("preto");
         necessidadesDoDino();
-        enterSelecao = false;
     }
     if(atividade == "luz"){
-        eventoSelecaoEsquerda = false;
-        eventoSelecaoDireita = false;
-        enterSelecao = false;
+        habilitarEventosIniciais(false);;
         telaLuzOn = true;
         tempoDeTelaLuzOn = true;
         enterLuz = true;
@@ -56,8 +61,22 @@ function selecaoDeAtividade(){
         luzOpcaoOn();
     }
     if(atividade === "estudar"){
-       dinoEstudando();
+        habilitarEventosIniciais(false);;
+        dinoEstudando();
     }
+    if(atividade === "brincar"){
+        habilitarEventosIniciais(false);
+        mostrarJogo = true;
+        percorrerJogo = true;
+        contadorJogor = 1;
+        clearInterval(intervaloBebe);
+        $(".pixel").removeClass("preto");
+        escolhaDoJogador();
+    }   
+    if(atividade === "banhar"){
+        habilitarEventosIniciais(false);;
+        banharDino();
+    } 
 }
 
    
