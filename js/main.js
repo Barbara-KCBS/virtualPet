@@ -73,9 +73,15 @@ function selecaoDeAtividade(){
         $(".pixel").removeClass("preto");
         escolhaDoJogador();
     }   
+
     if(atividade === "banhar"){
         habilitarEventosIniciais(false);;
         banharDino();
+    } 
+
+    if(atividade === "medicar"){
+        habilitarEventosIniciais(false);;
+        medicarDino();
     } 
 }
 
