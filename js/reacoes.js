@@ -26,7 +26,7 @@ function dinoBebeRaiva(){
         }
         if(contadorFelicidade === 5 && luzDesligada === false){
             clearInterval(intervaloFelicidade);
-            telaInicial();      
+            telaInicial(dinoBebe, frameBebeMovimento1);
         }  
         if(contadorFelicidade === 5 && luzDesligada === true){
             clearInterval(intervaloFelicidade);

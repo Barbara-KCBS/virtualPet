@@ -7,12 +7,11 @@ function estudandoFrame2(){
 }
 
 function dinoEstudando(){
-    
+
     contadorEstudando = 1;
 
     var intervaloEstudando = setInterval(() =>{
         if(contadorEstudando === 1){
-            clearInterval(intervaloBebe);
             desligarTodosOsPixels();
             estudandoFrame1();
         }
@@ -22,16 +21,12 @@ function dinoEstudando(){
         if(contadorEstudando === 5 && luzDesligada === false){
             clearInterval(intervaloEstudando);
             desligarTodosOsPixels();
-            telaInicial();
-            eventoSelecaoEsquerda = true;
-            eventoSelecaoDireita = true;        
+            telaInicial(dinoBebe, frameBebeMovimento1); 
         }  
+
         if(contadorEstudando === 5 && luzDesligada === true){
             clearInterval(intervaloEstudando);
             telaInicialApagada(); 
-            enterSelecao = true;  
-            eventoSelecaoEsquerda = true;
-            eventoSelecaoDireita = true;
         }  
 
         contadorEstudando += 1;

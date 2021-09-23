@@ -28,14 +28,14 @@ function aguaFrame7(){
     $(".A01, .A08, .B02, .B07, .N04, .N05, .N06, .O04, .O05, .O06, .P10").toggleClass("preto");
 }
 
+var bebida = 0;
 
 function beberAgua(){
-    
+    bebida += 1;
     contador = 1;
     var intervaloBebida = setInterval(() =>{
-        console.log(contador);
+        
         if(contador == 1){
-            clearInterval(intervaloBebe);
             desligarTodosOsPixels()
             aguaFrame1();
         }
@@ -73,15 +73,13 @@ function beberAgua(){
         if(contador == 12 && luzDesligada === false){
             clearInterval(intervaloBebida);
             arrotarFrame();
-            telaInicial();
-                  
+            telaInicial(dinoBebe, frameBebeMovimento1);        
         }  
 
         if(contador == 12 && luzDesligada === true){
             clearInterval(intervaloBebida);
             arrotarFrame();
-            telaInicialApagada();         
-            
+            telaInicialApagada();           
         }  
         contador += 1;
     }, 1050);

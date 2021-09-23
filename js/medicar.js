@@ -20,7 +20,6 @@ function dinoBebeInjeçaoFrame1(){
 
     var intervaloMedicar = setInterval(() =>{
         if(contadorMedicar === 1){
-            clearInterval(intervaloBebe);
             desligarTodosOsPixels();
             dinoBebeInjeçaoFrame1();
         }
@@ -41,7 +40,7 @@ function dinoBebeInjeçaoFrame1(){
 
         if(contadorMedicar === 5 && luzDesligada === false){
             clearInterval(intervaloMedicar);
-            telaInicial(); 
+            telaInicial(dinoBebe, frameBebeMovimento1);
         }
         if(contadorMedicar === 5 && luzDesligada === true){
             clearInterval(intervaloMedicar);

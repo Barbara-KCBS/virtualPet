@@ -1,12 +1,8 @@
 
-$("#iniciar-jogo").click(chocarOvo);
-
-$("#enter").click(comerHamburguer);
-$("#enter").click(comerMacarrao);
-$("#enter").click(comerSorvete);
-$("#enter").click(comerCenoura);
-$("#enter").click(comerMaca);
-$("#enter").click(comerCoxa);
+$("#iniciar-jogo").click(()=>{
+    $("#iniciar-jogo").fadeOut(1000);
+    chocarOvo();
+});
 
 $("#enter").click(selecaoDeAtividade);
 
@@ -21,6 +17,7 @@ function habilitarEventosIniciais(valor){
 
 function desligarTodosOsPixels(){
     $(".pixel").removeClass("preto");
+    
 }
 
 function selecaoDeAtividade(){
@@ -30,61 +27,73 @@ function selecaoDeAtividade(){
     }
 
     if(atividade === "beber"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);
         beberAgua();
     }
     if(atividade === "comer"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);
         mostrarComida = true;
         percorrerComida = true;
-        contadorComida = 1;
         iniciarIntervaloComida = true;
-        clearInterval(intervaloBebe);
-        desligarTodosOsPixels()
         opcoesDeComida();
     }    
     if(atividade === "carinho"){
-        habilitarEventosIniciais(false);;
+        telaDinoBebe = false;
+        habilitarEventosIniciais(false);
         dinoCarinho();
     }
 
     if(atividade == "necessidades"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);;
         mostrarNecessidade = true;
-        contadorNecessidades = 1;
+        percorrerNecessidades = true;
         iniciarIntervaloNecessidades = true;
-        clearInterval(intervaloBebe);
-        desligarTodosOsPixels()
         necessidadesDoDino();
     }
+
     if(atividade == "luz"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);;
-        telaLuzOn = true;
-        tempoDeTelaLuzOn = true;
-        enterLuz = true;
-        clearInterval(intervaloBebe);
-        luzOpcaoOn();
+        botaoEsquerdoLuzOn = true;
+        mostrarPainelDeLuz = true;
+        painelDeLuz();
     }
+
     if(atividade === "estudar"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);;
         dinoEstudando();
     }
+
     if(atividade === "brincar"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);
         mostrarJogo = true;
-        percorrerJogo = true;
-        contadorJogor = 1;
-        clearInterval(intervaloBebe);
-        desligarTodosOsPixels()
+        percorrerOpcoesDeLance = true;
+        iniciarJogo = true;
+        iniciarIntervaloDoJogo = true;
+        desligarTodosOsPixels();
         escolhaDoJogador();
     }   
 
     if(atividade === "banhar"){
-        habilitarEventosIniciais(false);;
+        telaDinoBebe = false;
+        habilitarEventosIniciais(false);
         banharDino();
     } 
 
+    if(atividade === "ar-condicionado"){
+        telaDinoBebe = false;
+        habilitarEventosIniciais(false);
+        mostrarPainelDeArCondicionado = true;
+        painelDeArCondicionado();
+    }
+
     if(atividade === "medicar"){
+        telaDinoBebe = false;
         habilitarEventosIniciais(false);;
         medicarDino();
     } 

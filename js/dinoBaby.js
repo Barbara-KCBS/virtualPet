@@ -14,34 +14,46 @@ function frameBebeMovimento4(){
     $(" .G09,.G10,.G11,.G12,.H08,.H13,.I07,.I14,.J07,.J09,.J12,.J14,.K07,.K14,.L07,.L14,.M08,.M09,.M10,.M11,.M12,.M13").toggleClass("preto");							 
 }
 
-function dinoBebe() {
-        
-        var contador = 5;
-        intervaloBebe = setInterval(() => {
+var telaDinoBebe;
 
-        if(contador == 5){
+function dinoBebe() {
+
+        if(telaDinoBebe === false){
+            return
+        }
+        
+        var contadorDinoBebe = 5;
+        var intervaloDinoBebe = setInterval(() => {
+            
+        if(telaDinoBebe === false){
+            clearInterval(intervaloDinoBebe);
+            return;
+        } 
+
+        if(contadorDinoBebe == 5){
                 frameBebeMovimento1();
                 frameBebeMovimento2();
         }
-        if(contador == 4){
+        if(contadorDinoBebe == 4){
                 frameBebeMovimento2();
                 frameBebeMovimento3();
         }
-        if(contador == 3){
+        if(contadorDinoBebe == 3){
                 frameBebeMovimento3();
                 frameBebeMovimento2();
         }
-        if(contador == 2){
+        if(contadorDinoBebe == 2){
                 frameBebeMovimento2();
                 frameBebeMovimento4();
                 
         }
-        if(contador == 1){
+        if(contadorDinoBebe == 1){
             frameBebeMovimento4();
             frameBebeMovimento1();
-            contador += 5;
+            contadorDinoBebe += 5;
         }
-        contador --;
+        contadorDinoBebe --;
+
     }, 1000);
 
 }

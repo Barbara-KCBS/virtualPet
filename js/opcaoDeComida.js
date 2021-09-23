@@ -1,11 +1,12 @@
-var contadorComida = 1;
-var ultimaComida = false;
-var mostrarComida;
-var comida;
+var contadorComida = 0;
+var mostrarComida = null;
+var comida = null;
 var iniciarIntervaloComida = false;
-var contadorIntervaloComida = 1;
+var contadorIntervaloComida = 0;
 var encerrarIntervaloComida = false;
-var percorrerComida = true;
+var percorrerComida = false;
+var escComida = false;
+var botaoDireitoComida = false;
 
 var valor;
 
@@ -18,6 +19,8 @@ function opcoesDeComida(){
     } 
 
     else{
+        escComida = true;
+
         if(iniciarIntervaloComida == true){
 
             iniciarIntervaloComida = false;
@@ -41,7 +44,7 @@ function opcoesDeComida(){
                     mostrarComida = false;
                     clearInterval(intervaloDaComida);
                     if(luzDesligada === false){
-                        telaInicial();
+                        telaInicial(dinoBebe, frameBebeMovimento1);
                     }
                     if(luzDesligada === true){
                         telaInicialApagada();
@@ -52,29 +55,35 @@ function opcoesDeComida(){
             }, 1000);
         }
 
-        if(contadorComida == 1 && ultimaComida == false){
-            contadorIntervaloComida = 1;
-            hamburguerFrame1();
-            comida = "hamburguer";
-            enterHamburguer = true;
-            
- 
+        if(botaoDireitoComida ===  false){
+            if(contadorComida === 6){
+                contadorComida = 1;
+            }
+            else{
+                contadorComida += 1;
+            }
         }
-        
-        if(contadorComida == 1 && ultimaComida == true){
+        if(botaoDireitoComida === true){
+            if(contadorComida === 1){
+                contadorComida = 6;
+            }
+            else{
+                contadorComida -= 1;
+            }
+
+        }
+
+        if(contadorComida == 1){
             contadorIntervaloComida = 1;
-            coxaFrame1();
+            desligarTodosOsPixels();
             hamburguerFrame1();
             comida = "hamburguer";
-            enterCoxa = false;
             enterHamburguer = true;
-            ultimaComida = false;
-            
         }
 
         if(contadorComida == 2){
             contadorIntervaloComida = 1;
-            hamburguerFrame1();
+            desligarTodosOsPixels();
             macarraoFrame1();
             comida = "macarrao";
             enterHamburguer = false;
@@ -84,7 +93,7 @@ function opcoesDeComida(){
     
         if(contadorComida == 3){
             contadorIntervaloComida = 1;
-            macarraoFrame1();
+            desligarTodosOsPixels();
             sorveteFrame1();
             comida = "sorvete"
             enterMacarrao = false;
@@ -94,7 +103,7 @@ function opcoesDeComida(){
 
         if(contadorComida == 4){
             contadorIntervaloComida = 1;
-            sorveteFrame1();
+            desligarTodosOsPixels();
             cenouraFrame1();
             comida = "cenoura"
             enterSorvete = false;
@@ -104,7 +113,7 @@ function opcoesDeComida(){
 
         if(contadorComida == 5){
             contadorIntervaloComida = 1;
-            cenouraFrame1();
+            desligarTodosOsPixels();
             macaFrame1()
             comida = "maca"
             enterCenoura = false;
@@ -114,27 +123,45 @@ function opcoesDeComida(){
 
         if(contadorComida == 6){
             contadorIntervaloComida = 1;
-            macaFrame1()
+            desligarTodosOsPixels();
             coxaFrame1();
-            comida = "coxa"
-            contadorComida -= 6;
-            ultimaComida = true;
+            comida = "coxa";
             enterMaca = false;
             enterCoxa = true;
            
         }
-        
-        contadorComida += 1;
     }
 }
 
-function percorrerOpcoesDeComida(){
-    if(mostrarComida == true && percorrerComida === true){
-        opcoesDeComida();
-    }
-    else{
+$(".selecao-esquerda").click(()=>{
+    if(percorrerComida === false){
         return
     }
-}
+    botaoDireitoComida = false;
+    opcoesDeComida();   
+});
 
-$(".selecao-esquerda").click(percorrerOpcoesDeComida);
+$(".selecao-direita").click(() => {
+    if(percorrerComida === false){
+        return
+    }
+    botaoDireitoComida = true;
+    opcoesDeComida();   
+});
+
+$("#esc").click(()=>{
+    if(escComida === false){
+        return
+    }
+    else{
+        contadorIntervaloComida = 10;
+        escComida = false;
+    }
+});
+
+$("#enter").click(comerHamburguer);
+$("#enter").click(comerMacarrao);
+$("#enter").click(comerSorvete);
+$("#enter").click(comerCenoura);
+$("#enter").click(comerMaca);
+$("#enter").click(comerCoxa);

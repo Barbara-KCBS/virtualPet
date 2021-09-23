@@ -199,12 +199,13 @@ function chocarOvo(){
 
             if(contadorChocarOvo == 36){
                 clearInterval(intervaloChocarOvo);
+                telaDinoBebe = true;
                 dinoBebe();
             }
             
             contadorChocarOvo ++;
            
-    }, 500);
+    }, 50);
     
 }
 

@@ -7,12 +7,11 @@ function carinhoFrame2(){
 }
 
 function dinoCarinho(){
-    
+
     contadorCarinho = 1;
 
     var intervaloCarinho = setInterval(() =>{
         if(contadorCarinho === 1){
-            clearInterval(intervaloBebe);
             desligarTodosOsPixels();
             carinhoFrame1();
         }
@@ -21,7 +20,7 @@ function dinoCarinho(){
         }
         if(contadorCarinho === 3 && luzDesligada === false){
             clearInterval(intervaloCarinho);
-            telaInicial();      
+            telaInicial(dinoBebe, frameBebeMovimento1);    
         }  
         if(contadorCarinho === 3 && luzDesligada === true){
             clearInterval(intervaloCarinho);

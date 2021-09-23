@@ -23,9 +23,8 @@ function banharDino(){
 
     var intervaloBanho = setInterval(() =>{
         
-        if(contadorBanho === 1){
-            clearInterval(intervaloBebe);
-            desligarTodosOsPixels()
+        if(contadorBanho === 1 || contadorBanho === 3){
+            desligarTodosOsPixels();
             banhoFrame1();
         }
 
@@ -34,12 +33,12 @@ function banharDino(){
             banhoFrame2();
         }
 
-        if(contadorBanho === 3){
-            banhoFrame2();
+        if(contadorBanho === 4){
+            desligarTodosOsPixels()
             banhoFrame3();
         }
 
-        if(contadorBanho === 4){
+        if(contadorBanho === 5){
             clearInterval(intervaloBanho);
             dinoFeliz();
         }

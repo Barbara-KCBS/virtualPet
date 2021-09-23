@@ -1,19 +1,15 @@
-$("#esc").click(telaInicial);
 
-function telaInicial(){
+
+function telaInicial(faseDoDino, frame1){
     desligarTodosOsPixels();
-    frameBebeMovimento1();
-    dinoBebe();
-    habilitarEventosIniciais(true);
-    
+    telaDinoBebe = true;
+    frame1();
+    faseDoDino();
+    habilitarEventosIniciais(true);   
 }
 
 function telaInicialApagada(){
-    luzDesligada = true;
-    tempoDeTelaLuzOff = false;
     $(".pixel").addClass("preto")
     habilitarEventosIniciais(true);
-    desligarLuz = false;
-
 }
 
