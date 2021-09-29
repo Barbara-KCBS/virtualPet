@@ -1,15 +1,17 @@
 
 
-function telaInicial(faseDoDino, frame1){
-    desligarTodosOsPixels();
-    telaDinoBebe = true;
-    frame1();
-    faseDoDino();
-    habilitarEventosIniciais(true);   
+function telaInicial(faseDoDino){
+    
+    habilitarEventosIniciais(true); 
+
+    if(luzDesligada === false){
+        telaDinoFase1 = true;
+        faseDoDino();
+    }
+
+    if(luzDesligada === true){
+        $(".pixel").addClass("preto")
+    }
 }
 
-function telaInicialApagada(){
-    $(".pixel").addClass("preto")
-    habilitarEventosIniciais(true);
-}
 

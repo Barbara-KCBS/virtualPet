@@ -1,72 +1,42 @@
+
 var agua = $("#agua");
-var comparando = $("#comida");
+var comida = $("#comida");
 var luz = $("#luz");
 var carinho = $("#carinho");
 var necessidades = $("#necessidades");
 
 $(".atividade-esquerda").hide();
 
-var contadorSelecaoEsquerda = 1;
-var ultimaAtividadeEsquerda = false;
-
+var contadorSelecaoEsquerda = 0;
 var eventoSelecaoEsquerda = true;
 
 var atividade;
 
-function percorrerAtividadesDaEsquerda(){
-     
-    if(eventoSelecaoEsquerda == false){
-        return
-    }
-    
-    else{
-        $(".atividade-direita").hide();
-    
-        if(contadorSelecaoEsquerda == 1 && ultimaAtividadeEsquerda == false){
-            agua.show(); 
-            atividade = "beber";
-            contadorSelecaoDireita = 1;
-        }
-        if(contadorSelecaoEsquerda == 1 && ultimaAtividadeEsquerda == true){
-            necessidades.hide();
-            agua.show(); 
-            atividade = "beber";
-            contadorSelecaoDireita = 1;
-        }
-        if(contadorSelecaoEsquerda == 2){
-            agua.hide(); 
-            comparando.show();
-            atividade = "comer";
-            contadorSelecaoDireita = 2;
-        }
-        if(contadorSelecaoEsquerda == 3){
-            comparando.hide();
-            luz.show();
-            atividade = "luz";
-            contadorSelecaoDireita = 3;
-        }
-        if(contadorSelecaoEsquerda == 4){
-            luz.hide(); 
-            carinho.show(); 
-            atividade = "carinho";
-            contadorSelecaoDireita = 4;
-        }
-        if(contadorSelecaoEsquerda == 5){
-            carinho.hide();
-            necessidades.show();
-            atividade = "necessidades";
-            contadorSelecaoEsquerda -= 5;
-            ultimaAtividadeEsquerda = true;
-            contadorSelecaoDireita = 5;
-        }
-    
-        contadorSelecaoEsquerda += 1;
+const listaSelecaoEsquerda = [agua, comida, luz, carinho, necessidades];
+const atividadesDoLadoEsquerdo = ["beber", "comer", "luz", "carinho", "necessidades"];
 
-    }
+function selecaoEsquerda(){
     
+    if(eventoSelecaoEsquerda === true){
+  
+        $(".atividade-direita").hide();
+
+        if(contadorSelecaoEsquerda === listaSelecaoEsquerda.length){
+            listaSelecaoEsquerda[4].hide();
+            contadorSelecaoEsquerda = 0;
+        }
+
+        listaSelecaoEsquerda[contadorSelecaoEsquerda].parent().prev().children().hide();
+        listaSelecaoEsquerda[contadorSelecaoEsquerda].show();
+        contadorSelecaoDireita = contadorSelecaoEsquerda;
+        atividade = atividadesDoLadoEsquerdo[contadorSelecaoEsquerda];
+
+        contadorSelecaoEsquerda ++;
+    }   
 }
 
-$(".selecao-esquerda").click(percorrerAtividadesDaEsquerda);  
+$(".selecao-esquerda").click(selecaoEsquerda);  
+
 
 
 

@@ -1,6 +1,6 @@
 
-$("#iniciar-jogo").click(()=>{
-    $("#iniciar-jogo").fadeOut(1000);
+$("#iniciar-jogo").click(function (){
+    $(this).fadeOut(1000);
     chocarOvo();
 });
 
@@ -9,10 +9,11 @@ $("#enter").click(selecaoDeAtividade);
 
 var enterSelecao = true;
 
-function habilitarEventosIniciais(valor){
-    eventoSelecaoEsquerda = valor;
-    eventoSelecaoDireita = valor;
-    enterSelecao = valor;
+function habilitarEventosIniciais(valorBoleano){
+    telaPrincipal = valorBoleano;
+    eventoSelecaoEsquerda = valorBoleano;
+    eventoSelecaoDireita = valorBoleano;
+    enterSelecao = valorBoleano;
 }
 
 function desligarTodosOsPixels(){
@@ -22,81 +23,62 @@ function desligarTodosOsPixels(){
 
 function selecaoDeAtividade(){
 
-    if(enterSelecao == false){
-        return
-    }
+    if(enterSelecao === true){
 
-    if(atividade === "beber"){
-        telaDinoBebe = false;
         habilitarEventosIniciais(false);
-        beberAgua();
-    }
-    if(atividade === "comer"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);
-        mostrarComida = true;
-        percorrerComida = true;
-        iniciarIntervaloComida = true;
-        opcoesDeComida();
-    }    
-    if(atividade === "carinho"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);
-        dinoCarinho();
-    }
 
-    if(atividade == "necessidades"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);;
-        mostrarNecessidade = true;
-        percorrerNecessidades = true;
-        iniciarIntervaloNecessidades = true;
-        necessidadesDoDino();
-    }
+        if(atividade === "beber"){
+            beberAgua();
+        }
+        if(atividade === "comer"){
+            mostrarComida = true;
+            percorrerComida = true;
+            iniciarIntervaloComida = true;
+            opcoesDeComida();
+        }    
+        if(atividade === "carinho"){
+            dinoCarinho();
+        }
 
-    if(atividade == "luz"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);;
-        botaoEsquerdoLuzOn = true;
-        mostrarPainelDeLuz = true;
-        painelDeLuz();
-    }
+        if(atividade == "necessidades"){
+            mostrarNecessidade = true;
+            percorrerNecessidades = true;
+            iniciarIntervaloNecessidades = true;
+            necessidadesDoDino();
+        }
 
-    if(atividade === "estudar"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);;
-        dinoEstudando();
-    }
+        if(atividade == "luz"){
+            botaoEsquerdoLuzOn = true;
+            mostrarPainelDeLuz = true;
+            painelDeLuz();
+        }
 
-    if(atividade === "brincar"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);
-        mostrarJogo = true;
-        percorrerOpcoesDeLance = true;
-        iniciarJogo = true;
-        iniciarIntervaloDoJogo = true;
-        desligarTodosOsPixels();
-        escolhaDoJogador();
-    }   
+        if(atividade === "estudar"){
+            dinoEstudando();
+        }
 
-    if(atividade === "banhar"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);
-        banharDino();
-    } 
+        if(atividade === "brincar"){
+            mostrarJogo = true;
+            percorrerOpcoesDeLance = true;
+            iniciarJogo = true;
+            iniciarIntervaloDoJogo = true;
+            escolhaDoJogador();
+        }   
 
-    if(atividade === "ar-condicionado"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);
-        mostrarPainelDeArCondicionado = true;
-        painelDeArCondicionado();
-    }
+        if(atividade === "banhar"){
+            banharDino();
+        } 
 
-    if(atividade === "medicar"){
-        telaDinoBebe = false;
-        habilitarEventosIniciais(false);;
-        medicarDino();
-    } 
+        if(atividade === "ar-condicionado"){
+            mostrarPainelDeArCondicionado = true;
+            painelDeArCondicionado();
+        }
+
+        if(atividade === "medicar"){
+            medicarDino();
+        } 
+
+  } 
 }
 
    

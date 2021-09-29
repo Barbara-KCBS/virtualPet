@@ -1,4 +1,5 @@
 function dinoBebeInjeçaoFrame1(){
+    desligarTodosOsPixels();
     $(".A16, .A17, .A18, .B17, .C17, .D15, .D16, .D17, .D18, .D19, .E16, .E17, .E18, .F16, .F17, .F18, .G16, .G17, .G18, .H16, .H17, .H18, .I16, .I17, .I18, .J06, .J07, .J08, .J09, .J10, .J17, .K05, .K11, .K17, .L04, .L07, .L09, .L12, .L17, .M04, .M06, .M07, .M08, .M09, .M10, .M12, .N04, .N07, .N09, .N12, .O04, .O12, .P05, .P06, .P07, .P08, .P09, .P10, .P11").toggleClass("preto"); 
  }
  
@@ -14,13 +15,15 @@ function dinoBebeInjeçaoFrame1(){
      $(".C16, .C17, .C18, .D15, .D16, .D17, .D18, .D19, .E16, .F08, .E18, .F16, .F18, .G05, .G11, .G16, .G18, .H16, .H18, .I06, .I07, .I08, .I09, .I10, .I16, .I17, .I18, .J05, .J11, .J17, .K04, .K12, .K17, .L04, .L06, .L10, .L12, .L17, .M04, .M12,  .N04, .N12,  .O04, .O12, .P05, .P06, .P07, .P08, .P09, .P10, .P11").toggleClass("preto"); 
  }
 
+//  dinoBebeInjeçaoFrame1();
+//  dinoBebeInjeçaoFrame1();
+//  dinoBebeInjeçaoFrame2()
  function medicarDino(){
 
-    contadorMedicar = 1;
+    let contadorMedicar = 1;
 
-    var intervaloMedicar = setInterval(() =>{
-        if(contadorMedicar === 1){
-            desligarTodosOsPixels();
+    const intervaloMedicar = setInterval(() =>{
+        if(contadorMedicar === 1){         
             dinoBebeInjeçaoFrame1();
         }
         if(contadorMedicar === 2){
@@ -40,7 +43,7 @@ function dinoBebeInjeçaoFrame1(){
 
         if(contadorMedicar === 5 && luzDesligada === false){
             clearInterval(intervaloMedicar);
-            telaInicial(dinoBebe, frameBebeMovimento1);
+            telaInicial(dinoFase1);
         }
         if(contadorMedicar === 5 && luzDesligada === true){
             clearInterval(intervaloMedicar);

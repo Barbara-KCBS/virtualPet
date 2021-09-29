@@ -1,36 +1,7 @@
-function inicioDoJogo(){
-    $(".C06, .C07, .C09, .C10, .D05, .D08, .D11, .E05, .E11, .F06, .F10, .G07, .G09, .G11, .G12, .G14, .G15, .H08, .H10,  .H11, .H12, .H13, .H14, .H15, .H16, .I10,  .I11, .I12, .I13, .I14, .I15, .I16, .J11, .J12, .J13, .J14, .J15, .K12, .K13, .K14, .L13, .K06, .K07, .K09,.K10, .L05, .L08, .L11, .M05, .M11, .N06, .N10, .O07, .O09, .P08").toggleClass("preto"); 
-}
-
-function jogadorPapel(){
-   $(".D03, .D04, .E02, .E05, .E06, .E07, .E08, .F01, .F02, .F09, .G06, .G07, .G08, .G09, .H09, .I06, .I07, .I08, .I09, .J09, .K06, .K07, .K08, .K09, .L01, .L02, .L09, .M03, .M04, .M05, .M06, .M07, .M08").toggleClass("preto");  
-}
-
-function jogadorPedra(){
-    $(".D03, .D04, .E02, .E05, .E06, .F01, .F02, .F07, .G06, .G07, .H07, .I06, .I07, .J07, .K06, .K07, .L01, .L02, .L07, .M03, .M04, .M05, .M06").toggleClass("preto");  
-}
-
-function jogadorTesoura(){
-    $(".D03, .D04, .E02, .E05, .F01, .F02, .F06, .F07, .F08, .F09, .F10, .G10, .H06, .H07, .H08, .H09, .I10, .J06, .J07, .J08, .J09, .J10, .K06, .L01, .L02, .L06, .M03, .M04, .M05").toggleClass("preto");  
-}
-
-function dinoPapel(){
-    $(".D14, .D15, .E14, .E15, .F17, .F18, .G13, .G14, .G16, .G17, .G18, .G19, .H13, .H14, .H16, .H17, .H18, .H19, .I16, .I17, .I18, .I19, .J13, .J14, .J16, .J17, .J18, .J19, .K13, .K14, .K16, .K17, .K18, .K19, .L17, .L18, .M14, .M15, .N14, .N15").toggleClass("preto"); 
-}
-
-function dinoPedra(){
-    $(".F17, .F18, .G16, .G17, .G18, .G19, .H16, .H17, .H18, .H19, .I16, .I17, .I18, .I19, .J16, .J17, .J18, .J19, .K16, .K17, .K18, .K19, .L17, .L18").toggleClass("preto");
-}
-
-function dinoTesoura(){
-    
-    $(".F17, .F18, .G13, .G14, .G16, .G17, .G18, .G19, .H13, .H14, .H16, .H17, .H18, .H19, .I16, .I17, .I18, .I19, .J13, .J14, .J16, .J17, .J18, .J19, .K13, .K14, .K16, .K17, .K18, .K19, .L17, .L18").toggleClass("preto"); 
-}
-
-var contadorJogador = 1;
+var contadorJogador = 0;
 var ultimaOpcao = false;
 var mostrarJogo = false;
-var lanceJogador = null;
+var lanceDoJogador = null;
 var lanceDino = null;
 var iniciarIntervaloDoJogo = false;
 var encerrarIntervaloJogador = false;
@@ -40,189 +11,21 @@ var iniciarJogo = true;
 var dinoPontos = 0;
 var jogadorPontos = 0;
 var rodadaJogo = 0;
+var percorrerLances = false;
 
 var escJogo = false;
 
-function dinoVenceu(){
-     encerrarIntervaloJogador = true;
-     let contadorReacao = 1;
-
-     const intervaloReacaoDino = setInterval(()=>{
-            if(contadorReacao === 1){
-                desligarTodosOsPixels();
-                frameBebeMovimento1();
-            }
-            if(contadorReacao === 2){
-                frameBebeMovimento1();
-                dinoBebeFeliz();
-            }
-            if(contadorReacao === 3){
-                dinoBebeFeliz();
-                frameBebeMovimento1();
-            }
-            if(contadorReacao === 4){
-                frameBebeMovimento1();
-                dinoBebeFeliz();
-            }
-            if(contadorReacao === 5){
-                clearInterval(intervaloReacaoDino);
-                desligarTodosOsPixels();
-                escolhaDoJogador();
-                reacaoDino = false; 
-            }
-            
-            contadorReacao += 1;
-    }, 1000);
-}    
-
-function dinoNaoVenceu(){
-    encerrarIntervaloJogador = true;
-    let contadorReacao = 1;
-
-    const intervaloReacaoDino = setInterval(()=>{
-        if(contadorReacao === 1){
-            desligarTodosOsPixels();
-            frameBebeMovimento1();
-        }
-        if(contadorReacao === 2){
-            frameBebeMovimento1();
-            dinoBebeRaiva();
-        }
-        if(contadorReacao === 3){
-            frameBebeMovimento1();
-            dinoBebeRaiva();
-        }
-        if(contadorReacao === 4){
-            frameBebeMovimento1()
-            dinoBebeRaiva();
-        }
-        if(contadorReacao === 5){
-            clearInterval(intervaloReacaoDino); 
-            desligarTodosOsPixels();
-            escolhaDoJogador();
-            reacaoDino = false;
-        }
-
-        contadorReacao += 1; 
-
-    }, 1000);
-}
-
-function resultaDosLance(funcaoLanceDino, funcaoLanceJogador, funcaoReacaoDino){
-        
-    let contador = 1;
-
-    const intervalo = setInterval(()=>{
-        if(contador === 1){
-            desligarTodosOsPixels();
-            funcaoLanceDino();
-        }
-        if(contador === 2){
-            funcaoLanceJogador();
-        }
-        if(contador === 3){
-            clearInterval(intervalo);
-            funcaoReacaoDino();
-            contadorJogador = 1;
-        }
-        contador ++;
-
-    }, 1000);  
- }   
-
-function compararLances(){
-
-    encerrarIntervaloJogador = true;
-
-    if(enterJogo === false){
-        return
-    }
-
-    rodadaJogo += 1;
-    enterJogo = false;
-
-    var lanceAleatoriDoDino = Math.floor(Math.random() * 3 + 1);
-
-    if(lanceAleatoriDoDino === 1){
-        lanceDino = "papel";
-    }
-
-    if(lanceAleatoriDoDino === 2){
-        lanceDino = "pedra";
-    }
-
-    if(lanceAleatoriDoDino === 3){
-        lanceDino = "tesoura";
-    }
-
-
-    // dino venceu
-
-    if(lanceJogador === "papel" && lanceDino === "tesoura"){
-        resultaDosLance(dinoTesoura, jogadorPapel, dinoVenceu);
-        dinoPontos += 1;
-    }
-
-    if(lanceJogador === "pedra" && lanceDino === "papel"){
-        resultaDosLance(dinoPapel, jogadorPedra, dinoVenceu);
-        dinoPontos += 1;
-    }
-
-    if(lanceJogador === "tesoura" && lanceDino === "pedra"){
-        resultaDosLance(dinoPedra, jogadorTesoura, dinoVenceu);
-        dinoPontos += 1;
-    }
-
-
-    //dino não venceu
-
-    if(lanceJogador === "papel" && (lanceDino === "pedra" || lanceDino === lanceJogador)){
-
-        if(lanceDino === "papel"){
-            resultaDosLance(dinoPapel, jogadorPapel, dinoNaoVenceu);
-        }
-
-        if(lanceDino === "pedra"){
-            resultaDosLance(dinoPedra, jogadorPapel, dinoNaoVenceu);
-            jogadorPontos += 1;
-        }
-        
-    }
-
-    if(lanceJogador === "pedra" && (lanceDino === "tesoura" || lanceDino === lanceJogador)){
-
-        if(lanceDino === "pedra"){
-            resultaDosLance(dinoPedra, jogadorPedra, dinoNaoVenceu);
-        }
-        if(lanceDino === "tesoura"){
-            resultaDosLance(dinoTesoura, jogadorPedra, dinoNaoVenceu);
-            jogadorPontos += 1;
-        }
-    }
-
-    if(lanceJogador === "tesoura" && (lanceDino === "papel" || lanceDino === lanceJogador)){
-        
-        if(lanceDino === "papel"){
-            resultaDosLance(dinoPapel, jogadorTesoura, dinoNaoVenceu);
-            jogadorPontos += 1;
-        }
-
-        if(lanceDino === "tesoura"){
-            resultaDosLance(dinoTesoura, jogadorTesoura, dinoNaoVenceu);
-        }
-    }
-}    
+const opcoesDeLanceDoJogador = [jogadorPapel, jogadorPedra, jogadorTesoura];
+const opcoesDeLanceDoDino = [dinoPapel, dinoPedra, dinoTesoura];
+const lances = ["papel", "pedra", "tesoura"];
 
 function escolhaDoJogador(){
 
-    encerrarIntervaloJogador = false;
-
-    if(mostrarJogo === false){
-        return
-    } 
-
-    else{
-
+    
+    if(mostrarJogo === true){
+        
+        encerrarIntervaloJogador = false;
+        percorrerLances = true;
         escJogo = true;
 
         if(iniciarIntervaloDoJogo === true){
@@ -241,7 +44,7 @@ function escolhaDoJogador(){
                 }
 
                 if(contadorIntervaloJogador === 10){ 
-                    contadorJogador = 1;
+                    contadorJogador = 0;
                     iniciarIntervaloDoJogo = true;
                     ultimaOpcao = false;
                     mostrarJogo = false;
@@ -249,23 +52,19 @@ function escolhaDoJogador(){
                     enterJogo = false;
                     rodadaJogo = 0;
                     contadorIntervaloJogador = 1;
-
                     clearInterval(intervaloJogador);
-                    if(luzDesligada === false){
-                        telaInicial(dinoBebe, frameBebeMovimento1);
-                    }
-                    if(luzDesligada === true){
-                        telaInicialApagada();
-                    }
+                    telaInicial(dinoFase1);
+                
+                 
                 }
-                console.log("contador intervalo jogo: " + contadorIntervaloJogador);
+                // console.log("contador intervalo jogo: " + contadorIntervaloJogador);
                 contadorIntervaloJogador += 1;
             }, 1000);
         }
 
 
-        if(contadorJogador === 1 && (iniciarJogo === true || rodadaJogo === 5)){
-            desligarTodosOsPixels();
+        if(contadorJogador === 0 && (iniciarJogo === true || rodadaJogo === 5)){
+            
             inicioDoJogo();
             var contadorInicioDoJogo = 1;
 
@@ -275,9 +74,9 @@ function escolhaDoJogador(){
                     if(jogadorPontos > dinoPontos || dinoPontos === jogadorPontos){
                         clearInterval(intavaloDoInicioDoJogo);
                         iniciarJogo = false;
-                        dinoNaoVenceu();
+                        reacaoDoResultadoDoJogo(dinoFase1Feliz);
                         rodadaJogo = 0;  
-                        contadorJogador = 1;
+                        contadorJogador = 0;
                         dinoPontos = 0;
                         jogadorPontos = 0;
                     }
@@ -285,9 +84,9 @@ function escolhaDoJogador(){
                     if(dinoPontos > jogadorPontos){
                         clearInterval(intavaloDoInicioDoJogo);
                         iniciarJogo = false;
-                        dinoVenceu();
+                        reacaoDoResultadoDoJogo(dinoFase1Raiva);
                         rodadaJogo = 0;
-                        contadorJogador = 1;
+                        contadorJogador = 0;
                         dinoPontos = 0;
                         jogadorPontos = 0;
                     }
@@ -295,65 +94,125 @@ function escolhaDoJogador(){
                 }
 
                 if(contadorInicioDoJogo === 2 && rodadaJogo === 0){
+                    console.log("entrou no inicio do jogo")
                     clearInterval(intavaloDoInicioDoJogo);
                     desligarTodosOsPixels();
                     jogadorPapel();
-                    lanceJogador = "papel";  
+                    lanceDoJogador = lances[contadorJogador];
                     iniciarJogo = false;
                 }
                 
-                contadorInicioDoJogo += 1;
+                contadorInicioDoJogo ++;
 
             }, 1000);
         }
-
-        if(contadorJogador === 1 && ultimaOpcao === false && iniciarJogo === false){
-            contadorIntervaloJogador = 1;
+        if(iniciarJogo === false){
+            console.log("entrou depois do inicio do jogo")
+            contadorIntervaloJogador = 0;
             desligarTodosOsPixels();
-            jogadorPapel();
-            lanceJogador = "papel";
+            opcoesDeLanceDoJogador[contadorJogador]();    
+            lanceDoJogador = lances[contadorJogador];
         }
         
-        if(contadorJogador == 1 && ultimaOpcao == true){
-            contadorIntervaloJogador = 1;
-            desligarTodosOsPixels();
-            jogadorPapel();
-            lanceJogador = "papel";        
-            ultimaOpcao = false;         
-        }
-
-        if(contadorJogador == 2){
-            contadorIntervaloJogador = 1;
-            jogadorPapel();
-            jogadorPedra();
-            lanceJogador = "pedra";
-        }
-
-        if(contadorJogador == 3){
-            contadorIntervaloJogador = 1;
-            jogadorPedra();
-            jogadorTesoura();
-            lanceJogador = "tesoura"
-            contadorJogador -= 3;
-            ultimaOpcao = true;              
-        }
-
-        contadorJogador += 1;
+    
     }
 }
 
-$(".selecao-esquerda").click(escolhaDoJogador);
+
+$(".selecao-esquerda").click(()=>{
+    if(percorrerLances === true){
+
+        if(contadorJogador === 2){
+            contadorJogador = 0;
+        }
+        else{
+            contadorJogador ++;
+        }
+        escolhaDoJogador(); 
+    }
+});
+
+$(".selecao-direita").click(() => {
+    if(percorrerLances === true){
+
+        if(contadorJogador === 0){
+            contadorJogador = 2;
+        }
+        else{
+            contadorJogador --;
+        }
+        escolhaDoJogador(); 
+    }
+});
+
+// $(".selecao-esquerda").click(escolhaDoJogador);
+
+
+function resultadoDosLance(funcaoLanceDino, funcaoLanceJogador, funcaoReacaoDino, emocaoDoDino){
+        
+    let contador = 1;
+
+    const intervalo = setInterval(()=>{
+        if(contador === 1){
+            desligarTodosOsPixels();
+            funcaoLanceDino();
+        }
+        if(contador === 2){
+            funcaoLanceJogador();
+        }
+        if(contador === 3){
+            clearInterval(intervalo);
+            funcaoReacaoDino(emocaoDoDino);
+            contadorJogador = 0;
+        }
+        contador ++;
+
+    }, 1000);  
+ }   
+
+function compararLances(){
+
+    if(enterJogo === true){
+        encerrarIntervaloJogador = true;
+        rodadaJogo ++;
+        percorrerLances = false;
+        enterJogo = false;
+
+        var lanceAleatoriDoDino = Math.floor(Math.random() * 3);
+
+            lanceDino = lances[lanceAleatoriDoDino];
+
+            // console.log(lanceDino);
+      
+
+
+        // dino venceu
+
+        if((lanceDoJogador === "papel" && lanceDino === "tesoura") || (lanceDoJogador === "pedra" && lanceDino === "papel") || (lanceDoJogador === "tesoura" && lanceDino === "pedra")){
+            resultadoDosLance(opcoesDeLanceDoDino[lanceAleatoriDoDino], opcoesDeLanceDoJogador[contadorJogador], reacaoDoResultadoDoJogo, dinoFase1Feliz);
+            dinoPontos ++;
+        }
+
+        //dino não venceu
+        if(lanceDoJogador === lanceDino){
+            resultadoDosLance(opcoesDeLanceDoDino[lanceAleatoriDoDino], opcoesDeLanceDoJogador[contadorJogador], reacaoDoResultadoDoJogo, dinoFase1Raiva);
+        }
+
+        if((lanceDoJogador === "papel" && lanceDino === "pedra") || (lanceDoJogador === "pedra" && lanceDino === "tesoura") || (lanceDoJogador === "tesoura" && lanceDino === "papel")){
+            resultadoDosLance(opcoesDeLanceDoDino[lanceAleatoriDoDino], opcoesDeLanceDoJogador[contadorJogador], reacaoDoResultadoDoJogo, dinoFase1Raiva);
+            jogadorPontos ++;
+        
+        }
+    }
+}    
+
 
 $("#enter").click(compararLances)
 
 $("#esc").click(()=>{
-    if(escJogo === false){
-        return
-    }
-    else{
+    if(escJogo === true){
         contadorIntervaloJogador = 10;
         escJogo = false;
     }
 });
-
 
