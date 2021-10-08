@@ -19,10 +19,10 @@ function dinoFase1Raiva(){
     const intervaloFelicidade = setInterval(()=>{
         if(contadorFelicidade === 1 || contadorFelicidade === 3){
             desligarTodosOsPixels();
-            frameDinoFase1Movimento1();
+            dinoFase1FrameMovimento1.toggleClass("preto");
         }
         if(contadorFelicidade === 2 || contadorFelicidade === 4){
-            frameDinoFase1Movimento1();
+            dinoFase1FrameMovimento1.toggleClass("preto");
             dinoFase1Feliz();
         }
         if(contadorFelicidade === 5 && luzDesligada === false){
@@ -51,7 +51,7 @@ function dinoArrotando(tela){
         console.log("contador arrotando: " + contador)
         if(contador === 1){
             desligarTodosOsPixels();
-            frameDinoFase1Movimento1();
+            dinoFase1FrameMovimento1.toggleClass("preto");
         }
         if(contador > 1 && contador <= 3){   
             arrotarFrame();
@@ -85,7 +85,7 @@ function reacaoDoResultadoDoJogo(emocaoDoDino){
     const intervaloReacaoDino = setInterval(()=>{
            if(contadorReacao === 1 || contadorReacao === 3){
                desligarTodosOsPixels();
-               frameDinoFase1Movimento1();
+               dinoFase1FrameMovimento1.toggleClass("preto");
            }
            if(contadorReacao === 2 || contadorReacao === 4){
                desligarTodosOsPixels();

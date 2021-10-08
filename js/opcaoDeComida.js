@@ -33,7 +33,8 @@ function opcoesDeComida(){
                     contadorIntervaloComida = 0;
                 }
 
-                if(contadorIntervaloComida == 10){ 
+                if(contadorIntervaloComida === 10){ 
+                    contadorIntervaloComida = 0;
                     iniciarIntervaloComida = true;
                     mostrarComida = false;
                     contadorComida = 0;
@@ -49,6 +50,7 @@ function opcoesDeComida(){
             }, 1000);
         }
 
+        contadorIntervaloComida = 0;
         listaFrameComida[contadorComida]();
         tipoDeComida = listaDeComida[contadorComida];
         escComida = true;
@@ -83,6 +85,7 @@ $(".selecao-direita").click(() => {
 });
 
 $("#esc").click(()=>{
+    console.log("comida")
     if(escComida === true){
         contadorIntervaloComida = 10;
         escComida = false;

@@ -210,6 +210,7 @@ function compararLances(){
 $("#enter").click(compararLances)
 
 $("#esc").click(()=>{
+    console.log("entrou jogo")
     if(escJogo === true){
         contadorIntervaloJogador = 10;
         escJogo = false;

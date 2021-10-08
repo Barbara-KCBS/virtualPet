@@ -3,8 +3,9 @@
 var telaDinoFase1 = false;
 var telaPrincipal = true;
 
-const listaFrameDinoFase1 = [frameDinoFase1Movimento1, frameDinoFase1Movimento2, frameDinoFase1Movimento3, frameDinoFase1Movimento2, frameDinoFase1Movimento4];
+const listaFrameDinoFase1 = [dinoFase1FrameMovimento1 , dinoFase1FrameMovimento2, dinoFase1FrameMovimento3, dinoFase1FrameMovimento2, dinoFase1FrameMovimento4];
 
+var frameAtualTelaPrincipal;
 
 function dinoFase1() {
     
@@ -17,7 +18,7 @@ function dinoFase1() {
                 return
             }
             desligarTodosOsPixels();
-            listaFrameDinoFase1[contador]();         
+            frameAtualTelaPrincipal = listaFrameDinoFase1[contador].addClass("preto");         
             
             contador ++;
             if(contador > 4){

@@ -10,7 +10,7 @@ $(".atividade-esquerda").hide();
 var contadorSelecaoEsquerda = 0;
 var eventoSelecaoEsquerda = true;
 
-var atividade;
+var atividade = "";
 
 const listaSelecaoEsquerda = [agua, comida, luz, carinho, necessidades];
 const atividadesDoLadoEsquerdo = ["beber", "comer", "luz", "carinho", "necessidades"];

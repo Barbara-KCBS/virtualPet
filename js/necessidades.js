@@ -174,6 +174,7 @@ $(".selecao-direita").click(() => {
 });
 
 $("#esc").click(()=>{
+    console.log("necessidades")
     if(escNecessidades === true){
         contadorIntervaloNecessidade = 10;
         escNecessidades = false;

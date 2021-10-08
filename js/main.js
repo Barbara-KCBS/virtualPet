@@ -4,7 +4,14 @@ $("#iniciar-jogo").click(function (){
     chocarOvo();
 });
 
-$("#enter").click(selecaoDeAtividade);
+$("#enter").click(()=>{
+    if(atividade === ""){
+        eventoSelecaoEsquerda = true;
+        selecaoEsquerda();
+    }else{
+        selecaoDeAtividade();
+    }
+});
 
 
 var enterSelecao = true;
@@ -22,6 +29,11 @@ function desligarTodosOsPixels(){
 }
 
 function selecaoDeAtividade(){
+
+    if(atividade === ""){
+        eventoSelecaoEsquerda = true;
+        selecaoEsquerda();
+    }
 
     if(enterSelecao === true){
 

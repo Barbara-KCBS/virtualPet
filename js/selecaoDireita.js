@@ -9,7 +9,6 @@ $(".atividade-direita").hide();
 var contadorSelecaoDireita = 0;
 var ultimaAtividadeDireita = false;
 
-var atividade;
 
 var eventoSelecaoDireita = true;
 

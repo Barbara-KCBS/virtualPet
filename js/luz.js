@@ -89,6 +89,7 @@ $(".selecao-esquerda").click(luzOpcaoOn);
 $(".selecao-direita").click(luzOpcaoOff);
 
 $("#esc").click(()=>{
+    console.log("luz")
     if(escLuz === true){  
         contadorIntervaloLuz = 10;
         escLuz = false;
