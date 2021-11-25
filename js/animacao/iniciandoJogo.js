@@ -36,6 +36,6 @@ function chocarOvo(){
 
         contador ++;
 
-    }, 50);    
+    }, 1000);    
     
 }
