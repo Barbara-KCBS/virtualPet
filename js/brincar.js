@@ -57,7 +57,7 @@ function escolhaDoJogador(){
                 
                  
                 }
-                // console.log("contador intervalo jogo: " + contadorIntervaloJogador);
+                
                 contadorIntervaloJogador += 1;
             }, 1000);
         }
@@ -94,7 +94,7 @@ function escolhaDoJogador(){
                 }
 
                 if(contadorInicioDoJogo === 2 && rodadaJogo === 0){
-                    console.log("entrou no inicio do jogo")
+                   
                     clearInterval(intavaloDoInicioDoJogo);
                     desligarTodosOsPixels();
                     jogadorPapel();
@@ -107,7 +107,7 @@ function escolhaDoJogador(){
             }, 1000);
         }
         if(iniciarJogo === false){
-            console.log("entrou depois do inicio do jogo")
+            
             contadorIntervaloJogador = 0;
             desligarTodosOsPixels();
             opcoesDeLanceDoJogador[contadorJogador]();    
@@ -145,9 +145,6 @@ $(".selecao-direita").click(() => {
     }
 });
 
-// $(".selecao-esquerda").click(escolhaDoJogador);
-
-
 function resultadoDosLance(funcaoLanceDino, funcaoLanceJogador, funcaoReacaoDino, emocaoDoDino){
         
     let contador = 1;
@@ -180,11 +177,7 @@ function compararLances(){
 
         var lanceAleatoriDoDino = Math.floor(Math.random() * 3);
 
-            lanceDino = lances[lanceAleatoriDoDino];
-
-            // console.log(lanceDino);
-      
-
+            lanceDino = lances[lanceAleatoriDoDino]; 
 
         // dino venceu
 
@@ -210,7 +203,6 @@ function compararLances(){
 $("#enter").click(compararLances)
 
 $("#esc").click(()=>{
-    console.log("entrou jogo")
     if(escJogo === true){
         contadorIntervaloJogador = 10;
         escJogo = false;
