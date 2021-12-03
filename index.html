@@ -10,16 +10,6 @@
    
 </head>
 <body>
-    
-    <button id="iniciar-jogo">iniciar jogo</button>
-    <button class="selecao-esquerda" id="selecao-esquerda"><</button>
-    <button class="selecao-direita">></button>
-    <button id="enter">Enter</button>
-    <button id="esc">esc</button>
-    <button id="clock">clock</button>
-
-    
-    
     <div class="display">
 
         <div class="opcoes-esquerda">
@@ -44,37 +34,56 @@
         </div>
 
     </div>
+
+    <div class="botoes">
+        <button id="iniciar-jogo">iniciar jogo</button>
+        <button class="selecao-esquerda" id="selecao-esquerda"><</button>
+        <button class="selecao-direita">></button>
+        <button id="enter">Enter</button>
+        <button id="esc">esc</button>
+        <button id="clock">clock</button>
+    </div>
     
     
-    <script src="./js/jquery.js"></script>
-    <script src="./matriz.js"></script>
-    <script src="./js/frames/fasesDoDino.js"></script>
-    <script src="./js/animacao/fasesDoDino.js"></script>
-    <script src="./js/frames/iniciarJogo.js"></script>
-    <script src="./js/animacao/iniciandoJogo.js"></script>
-    <script src="./js/frames/bebida.js"></script>
-    <script src="./js/animacao/bebendo.js"></script>
-    <script src="./js/frames/comidas.js"></script>
-    <script src="./js/animacao/comendo.js"></script>
-    <script src="./js/carinho.js"></script>
-    <script src="./js/necessidades.js"></script>
-    <script src="./js/frames/jogo.js"></script>
-    <script src="./js/reacoes.js"></script>
-    <script src="./js/opcaoDeComida.js"></script>
-    <script src="./js/luz.js"></script>
-    <script src="./js/brincar.js"></script>
-    <script src="./js/estudar.js"></script>
-    <script src="./js/frames/banho.js"></script>
-    <script src="./js/animacao/banho.js"></script>
-    <script src="./js/montagem.js"></script>
-    <script src="./js/arCondicionado.js"></script>
-    <script src="./js/frames/medicar.js"></script>
-    <script src="./js/animacao/medicar.js"></script>
-    <script src="./js/selecaoEsquerda.js"></script>
-    <script src="./js/selecaoDireita.js"></script>
-    <script src="./js/frames/relogio.js"></script>
-    <script src="./js/animacao/relogio.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/telaInicial.js"></script>
+    <script type="module" src="./js/principal/jquery.js"></script>
+    <script type="module" src="./js/principal/matriz.js"></script>
+    <script type="module" src="./js/principal/main.js"></script>
+    <script type="module" src="./js/frames/framesChocarOvo.js"></script>
+    <script type="module" src="./js/animacao/iniciarJogo.js"></script>
+    <script type="module" src="./js/principal/funcoes.js"></script>
+    <script type="module" src="./js/principal/telaInicial.js"></script>
+    <script type="module" src="./js/principal/percorreIconesDaEsquerda.js"></script>
+    <script type="module" src="./js/principal/percorreInconesDaDireita.js"></script>
+    <script type="module" src="./js/frames/dinoFase1frames.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1Animacao.js"></script>
+    <script type="module" src="./js/frames/dinoFase1BebendoFrames.js"></script>
+    <script type="module" src="./js/frames/dinoFase1ReacoesFrame.js"></script>
+    <script type="module" src="./js/frames/comidasFrames.js"></script>
+    <script type="module" src="./js/animacao/dinoComendo.js"></script>
+    <script type="module" src="./js/outrosRecursos/opcoesDeComida.js"></script>
+    <script type="module" src="./js/frames/dinoFase1CarinhoFrames.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1CarinhoAnimacao.js"></script>
+    <script type="module" src="./js/outrosRecursos/luz.js"></script>
+    <script type="module" src="./js/frames/dinoFase1EstudandoFrames.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1EstudandoAnimacao.js"></script>
+    <script type="module" src="./js/frames/dinoFase1BanhoFrames.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1BanhoAnimacao.js"></script>
+    <script type="module" src="./js/frames/dinoFase1MedicarFrames.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1Medicaranimacao.js"></script>
+    <script type="module" src="./js/principal/intervaloSemInteracao.js"></script>
+    <script type="module" src="./js/funcoesDosBotoes/enter.js"></script>
+    <script type="module" src="./js/principal/botoes.js"></script>
+    <script type="module" src="./js/funcoesDosBotoes/selecaoEsquerda.js"></script>
+    <script type="module" src="./js/funcoesDosBotoes/selecaoDireita.js"></script>
+    <script type="module" src="./js/principal/telaPrincipal.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1FelizAnimacao.js"></script>
+    <script type="module" src="./js/animacao/dinoFase1RaivaAnimacao.js"></script>
+    <script type="module" src="./js//jogoJokenpo/jogoJokenpoFrames.js"></script>
+    <script type="module" src="./js/jogoJokenpo/iniciarJokenpo.js"></script>
+    <script type="module" src="./js/jogoJokenpo/escolherLanceDoJogador.js"></script>
+    <script type="module" src="./js/jogoJokenpo/mostrarLanceDoDino.js"></script>
+    <script type="module" src="./js/jogoJokenpo/compararLances.js"></script>
+    <script type="module" src="./js/jogoJokenpo/resultadoDoJogo.js"></script>
+  
 </body>
 </html>
