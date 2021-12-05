@@ -1,5 +1,5 @@
 import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../../principal/intervaloSemInteracao.js";
-import { alterarEstadoAtualDaLuz, estadoAtualDaLuz, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../../outrosRecursos/luz.js";
+import { alterarEstadoAtualDaLuz, alterarInterruptor, estadoAtualDaLuz, interruptorOn, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../../outrosRecursos/luz.js";
 import { alterarContadorNecessidades, contadorNecessidades, necessidadesDoDino, percorrerNecessidades, permitirPercorrerNecessidades } from "../../outrosRecursos/painelDeNecessidade.js";
 import { alterarEstadoAtualDoArcondicionado, arcondicionado, arcondicionadoOff, arcondicionadoOn, estadoAtualDoArcondicionado, mostrarPainelDoArcondionado, painelDoArcondicionado } from "../../outrosRecursos/painelDoArCondicionado.js";
 import { selecaoDireita, percorrerIconesDaDireita, iconeDaDireita, contadorSelecaoDireita } from "../botaoSelecaoDireita/percorreInconesDaDireita.js";
@@ -21,7 +21,7 @@ function botaoDireito(){
     }
     if(painelDeLuz){
         alterarContadorIntervaloSemInteracao(0);
-        alterarEstadoAtualDaLuz("desligar");
+        alterarInterruptor(false);
         luz(luzOff)
     }
     if(painelDoArcondicionado){

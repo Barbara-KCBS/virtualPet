@@ -5,35 +5,6 @@ var pesoEIdade = $(".C11, .C13, .D11, .D13, .D15, .E11, .E13, .E14, .E17, .E18, 
 var estudos = $(".B02, .B03, .B04, .B05, .B06, .B07, .B08, .B09, .B10, .B11, .B12, .C04, .C05, .C06, .C07, .C08, .C09, .C13, .D03, .D10, .D13, .E02, .E11, .E13, .F02, .F05, .F08, .F11, .G02, .G11, .H02, .H05, .H06, .H07, .H08, .H11, .I03, .I10, .J04, .J05, .J06, .J07, .J08, .J09, .J12, .J13, .J14, .J15, .K12, .K15, .L12, .L18, .M12, .M17, .M18, .M19, .N12, .N18, .O12, .O15, .P12, .P13, .P14, .P15");
 var humor = $(".B06, .B07, .B08, .B09, .B10, .B11, .B12, .B13, .B14, .C05, .C06, .C14, .C15, .D04, .D16, .E04, .E06, .E09, .E11, .E14, .E16, .F03, .F07, .F08, .F12, .F13, .F17, .G03, .G17, .H03, .H06, .H07, .H08, .H09, .H10, .H11, .H12, .H13, .H14, .H17, .I03, .I05, .I06, .I07, .I08, .I09, .I10, .I11, .I12, .I13, .I14, .I15, .I17, .J03, .J05, .J06, .J07, .J08, .J09, .J10, .J11, .J12, .J13, .J14, .J15, .J17, .K03, .K05, .K06, .K07, .K08, .K09, .K10, .K11, .K12, .K13, .K14, .K15, .K17, .L03, .L17, .M04, .M16, .N05, .N15, .O06, .O07, .O13, .O14, .P07, .P08, .P09, .P10, .P11, .P12, .P13");
 
-
 export { humor, temperatura, sede, fome, pesoEIdade, estudos }
-// function prato1(){
-//     $(".C05, .C06, .D04, .D07, .E03, .E08").toggleClass("preto");
-// }
 
-// function prato3(){
-//     $(".K05, .K06, .L04, .L07, .M03, .M08").toggleClass("preto");
-// }
-
-// function prato4(){
-//     $(".K14, .K15, .L13, .L16, .M12, .M17").toggleClass("preto");
-// }
-
-// function prato2(){
-//     $(".C14, .C15, .D13, .D16, .E12, .E17").toggleClass("preto");
-// }
-
-//function copo1(){
-    //     $(".C04, .C05, .C06, .C07, .C08, .D04, .D05, .D06, .D07, .D08, .E04, .E05, .E06, .E07, .E08, .F04, .F05, .F06, .F07, .F08, .G05, .G06, .G07").toggleClass("preto");  
-    // }
-    // function copo2(){
-    //     $(".C12, .C13, .C14, .C15, .C16, .D12, .D13, .D14, .D15, .D16, .E12, .E13, .E14, .E15, .E16, .F12, .F13, .F14, .F15, .F16, .G13, .G14, .G15").toggleClass("preto");  
-    // }
-    // function copo3(){
-    //     $(".K04, .K05, .K06, .K07, .K08, .L04, .L05, .L06, .L07, .L08, .M04, .M05, .M06, .M07, .M08, .N04, .N05, .N06, .N07, .N08, .O05, .O06, .O07").toggleClass("preto"); 
-    // }
-    
-    // function copo4(){
-    //     $(".K12, .K13, .K14, .K15, .K16, .L12, .L13, .L14, .L15, .L16, .M12, .M13, .M14, .M15, .M16, .N12, .N13, .N14, .N15, .N16, .O13, .O14, .O15").toggleClass("preto");  
-    // }
     

@@ -4,5 +4,6 @@ var banhoDinoFase1Frame2 = $(".A01, .A05, .A06, .B02, .B03, .B04, .B05, .C02, .C
 
 var banhoDinoFase1Frame3 = $(".A01, .A05, .A06, .B02, .B03, .B04, .B05, .C02, .C03, .C04, .D02, .D03, .E01, .E02, .F01, .F14, .I10, .G12, .G17, .I13, .I14, .I15, .I16, .I19, .J12, .J17, .K11, .K18, .L11, .L13, .L16, L14, .M11, .M18, .O11, .O18, .N11, .N18, .L18, .N01, .N02, .N03, .N04, .N05, .N06, .N07, .O02, .O03, .O04, .O05, .O06, .P02, .P06, .P12, .P13, .P14, .P15, .P16, .P17");
 
-var banhoDinoFase1Frames = [banhoDinoFase1Frame1, banhoDinoFase1Frame2, banhoDinoFase1Frame3]
+var banhoDinoFase1Frames = [banhoDinoFase1Frame1, banhoDinoFase1Frame2, banhoDinoFase1Frame3];
+
 export { banhoDinoFase1Frames }

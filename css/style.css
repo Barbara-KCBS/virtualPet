@@ -1,74 +1,65 @@
+body{
+    background-color: rgba(0, 0, 0, 0.788);
+}
 .display{
-    position: relative;
-    height: 336px;
-    width: 602px;
-    margin: 5px auto;
-    border: 1px solid;
+    position: absolute;
+    display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    height: 247px;
+    width: 375px;
+    top: 213px;
 }
-.opcao{
-    width: 100px;
-    height: 67px;
-}
-
-.opcoes-esquerda{
-    position: absolute;
-    left: 0;
-    width: 100px;
-    height: 336px;
-    border: 1px solid;
-    text-align: center;
-
-}
-
-.opcoes-direita{
-    position: absolute;
-    right: 0;
-    width: 100px;
-    height: 336px;
-    border: 1px solid;
-    text-align: center;
-    
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+    height: 100%;
+    /* border: 1px solid; */
 }
 .opcao-esquerda, .opcao-direita{
-    width: 100px;
-    height: 60px;
-    /* display: none; */
+    width: 100%;
+    height: 17.86%;
 }
-
-img{
-   margin: 5px auto 0;
-   width: 45px;
-   display: block; 
+.atividade-esquerda, .atividade-direita{
+    margin: 5px auto 0;
+    width: 100%;
+    display: block; 
 }
-
 .main{
-    position: absolute;
-    left: 100px;
-    width: 399px;
-    height: 336px;
-    /* margin: 2px  auto; */
-    border: 1px solid black;
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 66.67%;
+    height: 90%;
+    /* border: 1px solid black; */
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 5.5%;
+}
+.pixel{
+    width: 4.5%;
 }
 .preto{
     background-color: black;
-}
-
-.pixel{
-    font-size: 0.5em;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    display: inline;
-    float: left;
-    margin-left: 1px;
-    margin-top: 1px;
 }
 .botoes{
     width: 602px;
     margin: 0 auto;
     text-align: center;
 }
+.corpo-tamagotchi{  
+   display: flex;
+   justify-content: center;
+   
+}
+
+.corpo-tamagotchi-img{
+    width: 700px; 
+}
+
 

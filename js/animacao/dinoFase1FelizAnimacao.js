@@ -1,12 +1,8 @@
 import { dinoFase1Frame1 } from "../frames/dinoFase1frames.js";
 import { dinoFase1FelizFrame } from "../frames/dinoFase1ReacoesFrame.js";
 import { iniciarJokenpo } from "../jogoJokenpo/iniciarJokenpo.js";
-// import { iniciarJokenpo } from "../jogoJokenpo/lanceDoLogador.js";
-import { intervaloSemInteracao, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { atividade } from "../principal/telaInicial.js"
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js"
-
-// dino feliz
 
 function dinoFase1Feliz(){
 

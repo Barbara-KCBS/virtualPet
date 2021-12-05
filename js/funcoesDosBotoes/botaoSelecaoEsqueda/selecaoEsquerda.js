@@ -1,8 +1,8 @@
 import { alterarContadorComida, comidaAtual, contadorComida, enterComida, opcoesDeComida, percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../../outrosRecursos/opcoesDeComida.js";
-import { alterarEstadoAtualDaLuz, estadoAtualDaLuz, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../../outrosRecursos/luz.js";
+import { alterarEstadoAtualDaLuz, alterarInterruptor, estadoAtualDaLuz, interruptorOn, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../../outrosRecursos/luz.js";
 import { alterarEstadoAtualDoArcondicionado, arcondicionado, arcondicionadoOff, arcondicionadoOn, estadoAtualDoArcondicionado, mostrarPainelDoArcondionado, painelDoArcondicionado } from "../../outrosRecursos/painelDoArCondicionado.js";
 import { selecaoEsquerda, percorrerIconesDaEsquerda, iconeDaEsquerda, contadorSelecaoEsquerda } from "./percorreIconesDaEsquerda.js";
-import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../../principal/intervaloSemInteracao.js";
+import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao } from "../../principal/intervaloSemInteracao.js";
 import { alterarContadorNecessidades, contadorNecessidades, necessidadesDoDino, percorrerNecessidades, permitirPercorrerNecessidades } from "../../outrosRecursos/painelDeNecessidade.js";
 import { entrarNoJogo, estaDentroDoJogo } from "../../jogoJokenpo/iniciarJokenpo.js";
 import { alterarContadorLanceDoJogador, contadorLanceDoJogador, escolherLanceDoJogador } from "../../jogoJokenpo/escolherLanceDoJogador.js";
@@ -21,7 +21,7 @@ function botaoEsquerdo(){
     }
     if(painelDeLuz){
         alterarContadorIntervaloSemInteracao(0);
-        alterarEstadoAtualDaLuz("ligar");
+        alterarInterruptor(true);
         luz(luzOn)
     }
     if(painelDoArcondicionado){

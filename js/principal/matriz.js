@@ -24,9 +24,9 @@ export function criarMatriz() {
                 // $(texto).text(texto);
                 
             }
-            if(i3 > 19){
-                $(linha).append("<div>");
-            }
+            // if(i3 > 19){
+            //     $(linha).append("<div>");
+            // }
                             
         }           
     }

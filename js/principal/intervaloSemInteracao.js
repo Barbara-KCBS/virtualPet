@@ -16,7 +16,7 @@ function pararIntervaloSemInteracao(boleano){
 function intervaloSemInteracao(){
       
     const intervalo = setInterval(()=>{
-    // console.log("intervalo Principal " + contadorIntervaloSemInteracao)
+    console.log("intervalo Principal " + contadorIntervaloSemInteracao)
         if(pararIntervalo){
             clearInterval(intervalo);
         }

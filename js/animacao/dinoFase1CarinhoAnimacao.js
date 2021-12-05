@@ -1,5 +1,4 @@
 import { carinhoFrame1, carinhoFrame2 } from "../frames/dinoFase1CarinhoFrames.js";
-import { habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function fazerCarinhoNoDino(){

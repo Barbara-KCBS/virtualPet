@@ -5,9 +5,12 @@ import { estadoAtualDaLuz, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecu
 import { percorrerNecessidades, permitirPercorrerNecessidades } from "../outrosRecursos/painelDeNecessidade.js";
 import { entrarNoJogo, estaDentroDoJogo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { relogio, relogioNaTela } from "../funcoesDosBotoes/clock.js";
+import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "./intervaloSemInteracao.js";
 
-
+alterarContadorIntervaloSemInteracao
 function voltarParaTelaPrincipal(){
+    pararIntervaloSemInteracao(true);
+    alterarContadorIntervaloSemInteracao(0);
     permitirPercorrerComidas(false);
     permitirComerComida(false);
     permitirPercorrerNecessidades(false);
@@ -15,10 +18,13 @@ function voltarParaTelaPrincipal(){
     habilitarEventosIniciais(true);
     entrarNoJogo(false);
     habilitarEsc(false);
-    relogioNaTela(false);
-    if(estadoAtualDaLuz == "ligar"){
+    
+    if(estadoAtualDaLuz){
         dinoFase1(true);
-    } else { $(".pixel").addClass("preto") }
+    } else { 
+        $(".pixel").addClass("preto") 
+    }
+    relogioNaTela(false);
     return
 }
 

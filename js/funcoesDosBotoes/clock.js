@@ -9,7 +9,7 @@ function relogioNaTela(boleano){
 }
 
 function botaoClock(){
-   if(telaPrincipal){
+   if(telaPrincipal && !relogio){
        pararDinoTelaPrincipal(false);
        habilitarEventosIniciais(false);
        mostrarPainelDoRelogio(); 

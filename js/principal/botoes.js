@@ -6,9 +6,9 @@ import { botaoDireito } from "../funcoesDosBotoes/botaoSelecaoDireita/selecaoDir
 import { botaoEsquerdo } from "../funcoesDosBotoes/botaoSelecaoEsqueda/selecaoEsquerda.js";
 
 
+$("#iniciar-jogo").one("click", botaoIniciar);
 $("#enter").on("click", botaoEnter);
 $(".selecao-esquerda").on("click", botaoEsquerdo);  
 $(".selecao-direita").on("click", botaoDireito);
 $("#esc").on("click", botaoEsc);
-$("#iniciar-jogo").on("click", botaoIniciar);
 $("#clock").on("click", botaoClock);

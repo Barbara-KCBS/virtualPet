@@ -18,8 +18,7 @@ function chocarOvo() {
             ligarEdesligarPixels(framesChocarOvo, contador);
         }
         if(contador === 10){
-            ligarEdesligarPixels(framesChocarOvo, 10);
-            
+            ligarEdesligarPixels(framesChocarOvo, 10);       
         }
         if(contador > 10 && contador <= 14 || contador > 18 && contador <= 22){
             ligarEdesligarPixels(framesChocarOvo, 11);
@@ -44,7 +43,7 @@ function chocarOvo() {
         }
 
         contador ++;
-    }, 50);    
+    }, 1000);    
     
 }
 

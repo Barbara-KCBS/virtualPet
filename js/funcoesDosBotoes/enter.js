@@ -6,17 +6,16 @@ import { fazerCarinhoNoDino } from "../animacao/dinoFase1CarinhoAnimacao.js";
 import { dinoFase1Estudando } from "../animacao/dinoFase1EstudandoAnimacao.js";
 import { medicarDinoFase1 } from "../animacao/dinoFase1Medicaranimacao.js";
 import { alterarContadorComida, comidaAtual, contadorComida, enterComida, opcoesDeComida,  percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
-import { alterarEstadoAtualDaLuz, estadoAtualDaLuz, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecursos/luz.js";
+import { alterarEstadoAtualDaLuz, alterarInterruptor, estadoAtualDaLuz, interruptorOn, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecursos/luz.js";
 import { alterarEstadoAtualDoArcondicionado, arcondicionado, arcondicionadoOff, arcondicionadoOn, estadoAtualDoArcondicionado, mostrarPainelDoArcondionado, painelDoArcondicionado } from "../outrosRecursos/painelDoArCondicionado.js";
 import { selecaoEsquerda, percorrerIconesDaEsquerda, iconeDaEsquerda, contadorSelecaoEsquerda  } from "./botaoSelecaoEsqueda/percorreIconesDaEsquerda.js";
 import { alterarAtividade, atividade, esconderIcones, habilitarEventosIniciais } from "../principal/telaInicial.js";
-import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
+import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { alterarContadorNecessidades, contadorNecessidades, necessidadesDoDino, percorrerNecessidades, permitirPercorrerNecessidades } from "../outrosRecursos/painelDeNecessidade.js";
 import { estaDentroDoJogo, iniciarJokenpo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { mostrarlanceDoDino } from "../jogoJokenpo/mostrarLanceDoDino.js";
 import { vezDoJogador } from "../jogoJokenpo/escolherLanceDoJogador.js";
-// import { percorreOpcoesAhDireita } from "./botaoSelecaoDireita/percorrerOpcoesAhDireita.js";
-// import { percorreOpcoesAhEsquerda } from "./botaoSelecaoEsqueda/percorrerOpcoesAhEsqueda.js";
+import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 
 function botaoEnter(){
@@ -47,23 +46,24 @@ function botaoEnter(){
     }
 
     if(atividade == "luz" && !painelDeLuz){
-        alterarEstadoAtualDaLuz("ligar");
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         mostrarPainelDeLuz(true);
         pararIntervaloSemInteracao(false);
         intervaloSemInteracao();
+        alterarInterruptor(true);
         luz(luzOn);
         return
     }
     if(painelDeLuz){  
         pararIntervaloSemInteracao(true);
-        if(estadoAtualDaLuz == "ligar"){
-            dinoFase1(true);
+        alterarContadorIntervaloSemInteracao(0);
+        if(interruptorOn){
+            alterarEstadoAtualDaLuz(true);
         } else {
-            $(".pixel").addClass("preto");
+            alterarEstadoAtualDaLuz(false);
         }
-        habilitarEventosIniciais(true);
+        voltarParaTelaPrincipal();
         mostrarPainelDeLuz(false);
         return
     }

@@ -1,11 +1,15 @@
 import { telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { contadorSelecaoEsquerda, iconeDaEsquerda } from "./botaoSelecaoEsqueda/percorreIconesDaEsquerda.js";
 import { contadorSelecaoDireita, iconeDaDireita } from "./botaoSelecaoDireita/percorreInconesDaDireita.js";
-import { atividade, esconderIcones, usoDoEsc } from "../principal/telaInicial.js";
+import { alterarAtividade, atividade, esconderIcones, usoDoEsc } from "../principal/telaInicial.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function botaoEsc(){
+    if(atividade == ""){
+        return
+    }
     if(usoDoEsc){
+        alterarAtividade("");
         voltarParaTelaPrincipal();
         return
     }

@@ -19,7 +19,7 @@ function permitirPercorrerNecessidades(boleano){
 const listaDeNecessidades = [humor, temperatura, sede, fome, pesoEIdade, estudos];
 
 function necessidadesDoDino(){
-        habilitarEsc(usoDoEsc);
+        habilitarEsc(true);
         alterarContadorIntervaloSemInteracao(0);
         
         $(".pixel").removeClass("preto");
