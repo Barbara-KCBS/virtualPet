@@ -1,21 +1,22 @@
 import { comer, dinoEstaComendo } from "../animacao/dinoComendo.js";
-import { dinoFase1, pararDinoTelaPrincipal } from "../animacao/dinoFase1Animacao.js";
+import { dinoFase1, pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { banharDinoFase1 } from "../animacao/dinoFase1BanhoAnimacao.js";
 import { dinoFase1Bebendo } from "../animacao/dinoFase1BebendoAnimacao.js";
 import { fazerCarinhoNoDino } from "../animacao/dinoFase1CarinhoAnimacao.js";
 import { dinoFase1Estudando } from "../animacao/dinoFase1EstudandoAnimacao.js";
 import { medicarDinoFase1 } from "../animacao/dinoFase1Medicaranimacao.js";
-import { alterarContadorComida, comidaAtual, contadorComida, enterComida, opcoesDeComida, percorreOpcoesAhDireita, percorreOpcoesAhEsquerda, percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
+import { alterarContadorComida, comidaAtual, contadorComida, enterComida, opcoesDeComida,  percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
 import { alterarEstadoAtualDaLuz, estadoAtualDaLuz, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecursos/luz.js";
 import { alterarEstadoAtualDoArcondicionado, arcondicionado, arcondicionadoOff, arcondicionadoOn, estadoAtualDoArcondicionado, mostrarPainelDoArcondionado, painelDoArcondicionado } from "../outrosRecursos/painelDoArCondicionado.js";
-import { selecaoEsquerda, percorrerIconesDaEsquerda, iconeDaEsquerda, contadorSelecaoEsquerda  } from "../principal/percorreIconesDaEsquerda.js";
+import { selecaoEsquerda, percorrerIconesDaEsquerda, iconeDaEsquerda, contadorSelecaoEsquerda  } from "./botaoSelecaoEsqueda/percorreIconesDaEsquerda.js";
 import { alterarAtividade, atividade, esconderIcones, habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { alterarContadorNecessidades, contadorNecessidades, necessidadesDoDino, percorrerNecessidades, permitirPercorrerNecessidades } from "../outrosRecursos/painelDeNecessidade.js";
 import { estaDentroDoJogo, iniciarJokenpo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { mostrarlanceDoDino } from "../jogoJokenpo/mostrarLanceDoDino.js";
 import { vezDoJogador } from "../jogoJokenpo/escolherLanceDoJogador.js";
-// import { estaDentroDoJogo, iniciarJokenpo, mostrarlanceDoDino, vezDoJogador } from "../jogoJokenpo/lanceDoLogador.js";
+// import { percorreOpcoesAhDireita } from "./botaoSelecaoDireita/percorrerOpcoesAhDireita.js";
+// import { percorreOpcoesAhEsquerda } from "./botaoSelecaoEsqueda/percorrerOpcoesAhEsqueda.js";
 
 
 function botaoEnter(){
@@ -23,7 +24,7 @@ function botaoEnter(){
         selecaoEsquerda();
         return;
     }
-    if(atividade == "beber"){
+    if(atividade == "beber" && telaPrincipal){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         dinoFase1Bebendo();
@@ -66,7 +67,7 @@ function botaoEnter(){
         mostrarPainelDeLuz(false);
         return
     }
-    if(atividade == "carinho"){
+    if(atividade == "carinho" && telaPrincipal){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         fazerCarinhoNoDino()
@@ -91,13 +92,13 @@ function botaoEnter(){
     if(estaDentroDoJogo && vezDoJogador){
         mostrarlanceDoDino();
     }
-    if(atividade == "estudar"){
+    if(atividade == "estudar" && telaPrincipal){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         dinoFase1Estudando();
         return
     }
-    if(atividade == "banhar"){
+    if(atividade == "banhar" && telaPrincipal){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         banharDinoFase1();
@@ -113,7 +114,7 @@ function botaoEnter(){
         arcondicionado(arcondicionadoOn);
         return
     }
-    if(atividade == "medicar"){
+    if(atividade == "medicar" && telaPrincipal){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
         medicarDinoFase1();

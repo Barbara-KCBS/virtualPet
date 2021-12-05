@@ -1,14 +1,19 @@
 import { dinoFase1Frame1, dinoFase1Frame2, dinoFase1Frame3, dinoFase1Frame4 } from "../frames/dinoFase1frames.js";
 
 var telaPrincipal = true;
+var frameAtualTelaPrincipal;
 
 function pararDinoTelaPrincipal(boleano){
     telaPrincipal = boleano;
 }
 
-const framesDinoFase1 = [dinoFase1Frame1 , dinoFase1Frame2, dinoFase1Frame3, dinoFase1Frame2, dinoFase1Frame4];
+function deslizarTelaPrincipalParaEsquerda(){
+    frameAtualTelaPrincipal.removeClass("preto");
+    frameAtualTelaPrincipal.prev().addClass("preto");
+    frameAtualTelaPrincipal = frameAtualTelaPrincipal.prev().addClass("preto");
+}
 
-var frameAtualTelaPrincipal;
+const framesDinoFase1 = [dinoFase1Frame1 , dinoFase1Frame2, dinoFase1Frame3, dinoFase1Frame2, dinoFase1Frame4];
 
 function dinoFase1(boleano) {
         telaPrincipal = boleano;
@@ -30,4 +35,10 @@ function dinoFase1(boleano) {
         
 }
 
-export { dinoFase1, pararDinoTelaPrincipal}
+export { 
+    dinoFase1,
+    pararDinoTelaPrincipal, 
+    frameAtualTelaPrincipal, 
+    telaPrincipal,
+    deslizarTelaPrincipalParaEsquerda
+}

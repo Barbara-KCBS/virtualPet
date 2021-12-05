@@ -1,4 +1,5 @@
 import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
+import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
 import { tiposDeLance } from "./iniciarJokenpo.js";
 import { inicioDoJogo, lancesDoJogadorFrames, lancesDoDinoFrames } from "./jogoJokenpoFrames.js";
 
@@ -17,12 +18,12 @@ function alterarContadorLanceDoJogador(valor){
     contadorLanceDoJogador = valor;
 }
 
-
 function alterarVezDoJogador(boleano){
     vezDoJogador = boleano;
 }
 
 function escolherLanceDoJogador(){
+    habilitarEsc(true);
     vezDoJogador = true;
     alterarContadorIntervaloSemInteracao(0);
     $(".pixel").removeClass("preto");

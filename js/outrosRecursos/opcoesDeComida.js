@@ -1,5 +1,6 @@
 import { hamburguerFrames, macarraoFrames, sorveteFrames, cenouraFrames, macaFrames, coxaFrames } from "../frames/comidasFrames.js";
 import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao, intervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
+import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
 
 var comidaAtual = null;
 var contadorComida = 0;
@@ -25,7 +26,7 @@ const framesDasComidas = [hamburguerFrames, macarraoFrames, sorveteFrames, cenou
 
 
 function opcoesDeComida(){
-
+        habilitarEsc(true);
         alterarContadorIntervaloSemInteracao(0);
 
         $(".pixel").removeClass("preto");
@@ -36,34 +37,32 @@ function opcoesDeComida(){
 }
 
 
-function percorreOpcoesAhDireita(atividadeAhSerPercorrida, contador, receberNovoValor, quantidadeDeOpcoes){
-    if(contador === 0){
-        contador = quantidadeDeOpcoes;
-    }
-    else{
-        contador--;
-    }
-    receberNovoValor(contador)
-    atividadeAhSerPercorrida();
-}
-function percorreOpcoesAhEsquerda(atividadeAhSerPercorrida, contador, receberNovoValor, quantidadeDeOpcoes){
-    if(contador === quantidadeDeOpcoes){
-        contador = 0;
-    }
-    else{
-        contador++;
-    }
-    receberNovoValor(contador)
-    atividadeAhSerPercorrida();
-}
+// function percorreOpcoesAhDireita(atividadeAhSerPercorrida, contador, receberNovoValor, quantidadeDeOpcoes){
+//     if(contador === 0){
+//         contador = quantidadeDeOpcoes;
+//     }
+//     else{
+//         contador--;
+//     }
+//     receberNovoValor(contador)
+//     atividadeAhSerPercorrida();
+// }
+// function percorreOpcoesAhEsquerda(atividadeAhSerPercorrida, contador, receberNovoValor, quantidadeDeOpcoes){
+//     if(contador === quantidadeDeOpcoes){
+//         contador = 0;
+//     }
+//     else{
+//         contador++;
+//     }
+//     receberNovoValor(contador)
+//     atividadeAhSerPercorrida();
+// }
 
 
 export {
     opcoesDeComida, 
     alterarContadorComida, 
     contadorComida, 
-    percorreOpcoesAhDireita, 
-    percorreOpcoesAhEsquerda,
     percorrerComida, 
     permitirPercorrerComidas, 
     permitirComerComida, 
