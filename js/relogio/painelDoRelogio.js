@@ -1,6 +1,6 @@
 import { telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { relogio, relogioNaTela } from "../funcoesDosBotoes/clock.js";
-import { desligarPixelsHoraDig2, desligarPixelsMinutosDig1, desligarPixelsMinutosDig2, desligarPixelsSegundosDig1, desligarPixelsSegundosDig2, horaFramesDigito2, maisDeNoveHoras, minutosFramesDigito1, minutosFramesDigito2, primeiroPeriodo, segundoPeriodo, segundosFramesDigito1, segundosFramesDigito2 } from "../relogio/RelogioFrames.js";
+import {  horaFramesDigito2, maisDeNoveHoras, minutosFramesDigito1, minutosFramesDigito2, painelDeHoras, primeiroPeriodo, segundoPeriodo, segundosFramesDigito1, segundosFramesDigito2 } from "../relogio/RelogioFrames.js";
 
 
 function painelDoRelogio(){
@@ -15,7 +15,6 @@ function painelDoRelogio(){
       const segundos = data.getSeconds();
   
       let horasString = String(hora).split('');
-      let horaDig1 = Number(horasString[0]);
       let horaDig2 = Number(horasString[1]);
   
       let minutosString = String(minutos).split('');
@@ -26,14 +25,8 @@ function painelDoRelogio(){
       let segundoDig1 = Number(segundosString[0]);
       let segundoDig2 = Number(segundosString[1]);
       
-      desligarPixelsHoraDig2.removeClass("preto");
-      maisDeNoveHoras.removeClass("preto");
-  
-      desligarPixelsMinutosDig1.removeClass("preto");
-      desligarPixelsMinutosDig2.removeClass("preto");
-  
-      desligarPixelsSegundosDig1.removeClass("preto");
-      desligarPixelsSegundosDig2.removeClass("preto");
+      $(".pixel").removeClass("preto");
+      painelDeHoras.toggleClass("preto");
   
       if(hora <= 11){ primeiroPeriodo.addClass("preto") } else { segundoPeriodo.addClass("preto") };
   
@@ -77,3 +70,4 @@ function painelDoRelogio(){
   } 
 
   export { painelDoRelogio }
+

@@ -1,9 +1,9 @@
-import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
+import { intervaloSemInteracao, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { habilitarEsc } from "../principal/telaInicial.js";
 import { compararLances } from "./compararLances.js";
 import { alterarVezDoJogador, lanceAtualDoJogador, vezDoJogador } from "./escolherLanceDoJogador.js";
 import { tiposDeLance } from "./iniciarJokenpo.js";
-import { inicioDoJogo, lancesDoJogadorFrames, lancesDoDinoFrames } from "./jogoJokenpoFrames.js";
+import { lancesDoDinoFrames } from "./jogoJokenpoFrames.js";
 
 var lanceDoDino = "";
 var pontosDoDino = 0;

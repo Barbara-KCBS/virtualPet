@@ -9,11 +9,11 @@ function botaoEsc(){
         return
     }
     if(usoDoEsc){
-        alterarAtividade("");
         voltarParaTelaPrincipal();
         return
     }
     if(telaPrincipal && atividade != ""){
+        alterarAtividade("");
         esconderIcones();
         iconeDaDireita(0);
         iconeDaEsquerda(0);

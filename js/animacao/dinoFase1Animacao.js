@@ -1,6 +1,6 @@
 import { dinoFase1Frame1, dinoFase1Frame2, dinoFase1Frame3, dinoFase1Frame4 } from "../frames/dinoFase1frames.js";
 
-var telaPrincipal = true;
+var telaPrincipal = false;
 var frameAtualTelaPrincipal;
 
 function pararDinoTelaPrincipal(boleano){

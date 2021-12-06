@@ -6,6 +6,7 @@ import { percorrerNecessidades, permitirPercorrerNecessidades } from "../outrosR
 import { entrarNoJogo, estaDentroDoJogo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { relogio, relogioNaTela } from "../funcoesDosBotoes/clock.js";
 import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "./intervaloSemInteracao.js";
+import { mostrarPainelDoArcondionado, painelDoArcondicionado } from "../outrosRecursos/painelDoArCondicionado.js";
 
 alterarContadorIntervaloSemInteracao
 function voltarParaTelaPrincipal(){
@@ -15,6 +16,7 @@ function voltarParaTelaPrincipal(){
     permitirComerComida(false);
     permitirPercorrerNecessidades(false);
     mostrarPainelDeLuz(false);
+    mostrarPainelDoArcondionado(false);
     habilitarEventosIniciais(true);
     entrarNoJogo(false);
     habilitarEsc(false);

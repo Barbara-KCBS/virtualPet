@@ -84,7 +84,12 @@ const segundosFramesDigito2 = [segundosZeroDig2, segundosUmDig2, segundosDoisDig
 
 var primeiroPeriodo = $(".L01, .L02, .L03, .L05, .L06, .L08, .L09, .M01, .M03, .M05, .M07, .M09, .N01, .N02, .N03, .N05, .N07, .N09, .O01, .O03, .O05, .O09");
 var segundoPeriodo = $(".L01, .L02, .L03, .L05, .L06, .L08, .L09, .M01, .M03, .M05, .M07, .M09, .N01, .N02, .N03, .N05, .N07, .N09, .O01, .O05, .O09");
+// primeiroPeriodo.toggleClass("preto")
 
+
+// var primeiroTeste = $(".L19, .L20, .L21, .L23, .L24, .L26, .L27, .M19, .M21, .M23, .M25, .M27, .N19, .N20, .N21, .N23, .N25, .N27, .O19, .O21, .O23, .O27");
+
+// primeiroTeste.toggleClass("preto")
 export {
     painelDeHoras,  
     horaFramesDigito2, 

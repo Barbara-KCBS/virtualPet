@@ -57,9 +57,44 @@ body{
    justify-content: center;
    
 }
-
-.corpo-tamagotchi-img{
+.corpo-tamagotchi{
+   position: relative;
+}
+.corpo-tamagotchi-img{   
     width: 700px; 
 }
 
+.botoes-select{  
+    position: absolute;
+    height: 88px;
+}
 
+#selecao-esquerda{    
+     top: 379px;
+     left: 46px;
+}
+#selecao-direita{
+    top: 380px;
+    right: 47px;
+}
+.botao-esc{
+    position: absolute;
+    height: 53px;
+    left: 207px;
+    top: 557px;
+}
+.botao-enter{
+    position: absolute;
+    height: 45px;
+    left: 311px;
+    top: 571px;
+}
+.botao-clock{
+    position: absolute;
+    height: 53px;
+    right: 211px;
+    top: 555px;
+}
+.botao-pressionado{
+    height: 85px;
+}

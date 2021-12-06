@@ -1,4 +1,4 @@
-import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
+import { pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
 import { dinoArrotando } from "./dinoFase1Arrotando.js";
 var dinoEstaComendo = false;

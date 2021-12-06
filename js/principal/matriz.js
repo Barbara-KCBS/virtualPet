@@ -25,7 +25,7 @@ export function criarMatriz() {
                 
             }
             // if(i3 > 19){
-            //     $(linha).append("<div>");
+            //     $(linha).append("<div>", { class: "div-oculta" });
             // }
                             
         }           
