@@ -2,8 +2,8 @@ import { telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { relogio, relogioNaTela } from "../funcoesDosBotoes/clock.js";
 import {  horaFramesDigito2, maisDeNoveHoras, minutosFramesDigito1, minutosFramesDigito2, painelDeHoras, primeiroPeriodo, segundoPeriodo, segundosFramesDigito1, segundosFramesDigito2 } from "../relogio/RelogioFrames.js";
 
-
 function painelDoRelogio(){
+    $(".divs-auxiliar").remove();
     const intervalo = setInterval(()=>{
       if(telaPrincipal){
         clearInterval(intervalo);

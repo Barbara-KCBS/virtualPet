@@ -7,11 +7,21 @@ var relogio = false;
 function relogioNaTela(boleano){
     relogio = boleano;
 }
+function divsAuxiliares(){
+    for(let i2 = 1; i2 <= 16; i2++){
+        let linha = `.linha${i2}`
+        for(let i3 = 1; i3 <= 19; i3++){  
+            var criarDiv = $("<div/>", {class: "divs-auxiliar"})                             
+            $(linha).append(criarDiv);
+        }                                
+    }
+}
 
 function botaoClock(){
    if(telaPrincipal && !relogio){
        pararDinoTelaPrincipal(false);
        habilitarEventosIniciais(false);
+       divsAuxiliares();
        mostrarPainelDoRelogio(); 
        return
    } 
