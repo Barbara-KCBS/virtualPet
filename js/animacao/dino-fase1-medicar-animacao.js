@@ -1,6 +1,6 @@
 import { injecaoDinoFase1Frames } from "../frames/dinoFase1MedicarFrames.js";
 import { habilitarEventosIniciais } from "../principal/telaInicial.js";
-import { dinoFase1 } from "./dinoFase1Animacao.js";
+import { dinoFase1 } from "./dino-fase1-animacao.js";
 
 
  function medicarDinoFase1(){

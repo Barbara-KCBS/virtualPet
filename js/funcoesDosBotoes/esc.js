@@ -1,4 +1,4 @@
-import { telaPrincipal } from "../animacao/dinoFase1Animacao.js";
+import { telaPrincipal } from "../animacao/dino-fase1-animacao.js";
 import { contadorSelecaoEsquerda, iconeDaEsquerda } from "./botaoSelecaoEsqueda/percorreIconesDaEsquerda.js";
 import { contadorSelecaoDireita, iconeDaDireita } from "./botaoSelecaoDireita/percorreInconesDaDireita.js";
 import { alterarAtividade, atividade, esconderIcones, usoDoEsc } from "../principal/telaInicial.js";

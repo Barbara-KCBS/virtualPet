@@ -1,4 +1,4 @@
-import { dinoFase1 } from "../animacao/dinoFase1Animacao.js";
+import { dinoFase1 } from "../animacao/dino-fase1-animacao.js";
 import { habilitarEsc, habilitarEventosIniciais, usoDoEsc } from "./telaInicial.js";
 import { enterComida, percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
 import { estadoAtualDaLuz, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecursos/luz.js";

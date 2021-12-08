@@ -1,10 +1,10 @@
-import { comer, dinoEstaComendo } from "../animacao/dinoComendo.js";
-import { dinoFase1, pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dinoFase1Animacao.js";
-import { banharDinoFase1 } from "../animacao/dinoFase1BanhoAnimacao.js";
-import { dinoFase1Bebendo } from "../animacao/dinoFase1BebendoAnimacao.js";
-import { fazerCarinhoNoDino } from "../animacao/dinoFase1CarinhoAnimacao.js";
-import { dinoFase1Estudando } from "../animacao/dinoFase1EstudandoAnimacao.js";
-import { medicarDinoFase1 } from "../animacao/dinoFase1Medicaranimacao.js";
+import { comer, dinoEstaComendo } from "../animacao/dino-comendo.js";
+import { dinoFase1, pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dino-fase1-animacao.js";
+import { banharDinoFase1 } from "../animacao/dino-fase1-banho-animacao.js";
+import { dinoFase1Bebendo } from "../animacao/dino-fase1-bebendo-animacao.js";
+import { fazerCarinhoNoDino } from "../animacao/dino-fase1-carinho-animacao.js";
+import { dinoFase1Estudando } from "../animacao/dino-fase1-estudando-animacao.js";
+import { medicarDinoFase1 } from "../animacao/dino-fase1-medicar-animacao.js";
 import { alterarContadorComida, comidaAtual, contadorComida, enterComida, opcoesDeComida,  percorrerComida, permitirComerComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
 import { alterarEstadoAtualDaLuz, alterarInterruptor, estadoAtualDaLuz, interruptorOn, luz, luzOff, luzOn, mostrarPainelDeLuz, painelDeLuz } from "../outrosRecursos/luz.js";
 import { alterarEstadoAtualDoArcondicionado, arcondicionado, arcondicionadoOff, arcondicionadoOn, estadoAtualDoArcondicionado, mostrarPainelDoArcondionado, painelDoArcondicionado } from "../outrosRecursos/painelDoArCondicionado.js";

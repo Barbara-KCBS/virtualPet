@@ -1,4 +1,4 @@
-import { pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dinoFase1Animacao.js";
+import { pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dino-fase1-animacao.js";
 import { alterarAtividade, atividade, habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 import { mostrarPainelDoRelogio } from "../relogio/mostrarRelogio.js";

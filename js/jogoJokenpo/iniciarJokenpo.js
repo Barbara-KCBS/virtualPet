@@ -1,5 +1,5 @@
-import { dinoFase1Feliz } from "../animacao/dinoFase1FelizAnimacao.js";
-import { dinoFase1Raiva } from "../animacao/dinoFase1RaivaAnimacao.js";
+import { dinoFase1Feliz } from "../animacao/dino-fase1-feliz-animacao.js";
+import { dinoFase1Raiva } from "../animacao/dino-fase1-raiva-animacao.js";
 import { alterarContadorIntervaloSemInteracao, intervaloSemInteracao, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { alterarRodadas, rodadas } from "./compararLances.js";
 import { alterarContadorLanceDoJogador, alterarPontosDoJogador, contadorLanceDoJogador, escolherLanceDoJogador, pontosDoJogador } from "./escolherLanceDoJogador.js";
