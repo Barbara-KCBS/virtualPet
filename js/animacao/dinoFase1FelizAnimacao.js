@@ -4,6 +4,7 @@ import { iniciarJokenpo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { atividade } from "../principal/telaInicial.js"
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js"
 
+
 function dinoFase1Feliz(){
 
    let contador = 1;

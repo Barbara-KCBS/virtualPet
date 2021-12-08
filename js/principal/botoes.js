@@ -23,11 +23,11 @@ $("#enter").on("click", function(){
     pressionarBotao(this);
     botaoEnter();
 });
-$("#selecao-esquerda").on("click", function(){
+$("#botao-select-esquerdo").on("click", function(){
     pressionarBotao(this);
     botaoEsquerdo();
 });  
-$("#selecao-direita").on("click", function(){
+$("#botao-select-direito").on("click", function(){
     pressionarBotao(this);
     botaoDireito();
 });

@@ -1,5 +1,5 @@
 import { pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dinoFase1Animacao.js";
-import { habilitarEventosIniciais } from "../principal/telaInicial.js";
+import { alterarAtividade, atividade, habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 import { mostrarPainelDoRelogio } from "../relogio/mostrarRelogio.js";
 
@@ -19,6 +19,7 @@ function divsAuxiliares(){
 
 function botaoClock(){
    if(telaPrincipal && !relogio){
+       alterarAtividade("");
        pararDinoTelaPrincipal(false);
        habilitarEventosIniciais(false);
        divsAuxiliares();

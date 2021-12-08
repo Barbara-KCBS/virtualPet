@@ -26,7 +26,9 @@ function voltarParaTelaPrincipal(){
     } else { 
         $(".pixel").addClass("preto") 
     }
-    relogioNaTela(false);
+    setTimeout(()=>{
+        relogioNaTela(false);
+    }, 1000)   
     return
 }
 

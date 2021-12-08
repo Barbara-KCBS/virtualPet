@@ -30,7 +30,7 @@ function botaoDireito(){
         arcondicionado(arcondicionadoOff);
     }
     if(estaDentroDoJogo){
-        percorreOpcoesAhEsquerda(escolherLanceDoJogador, contadorLanceDoJogador, alterarContadorLanceDoJogador, 2);
+        percorreOpcoesAhDireita(escolherLanceDoJogador, contadorLanceDoJogador, alterarContadorLanceDoJogador, 2);
     }
 }
 
