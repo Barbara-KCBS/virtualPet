@@ -17,29 +17,26 @@ function pressionarBotao(elemento){
     }, 100);   
 }
 
-
-    $("#iniciar-jogo").one("click", botaoIniciar);
-    $("#enter").on("click", function(){  
-        pressionarBotao(this);
-        botaoEnter();
-    });
-
-    $("#botao-select-esquerdo").on("click", function(){
-        pressionarBotao(this);
-        botaoEsquerdo();
-    });  
-    $("#botao-select-direito").on("click", function(){
-        pressionarBotao(this);
-        botaoDireito();
-    });
-    $("#esc").on("click", function(){
-        pressionarBotao(this);
-        botaoEsc();
-    });
-    $("#clock").on("click", function(){
-        pressionarBotao(this);
-        botaoClock();
-    });
-
-
+$("#iniciar-jogo").one("click", botaoIniciar);
+$("#enter").on("click", function(){
+    
+    pressionarBotao(this);
+    botaoEnter();
+});
+$("#botao-select-esquerdo").on("click", function(){
+    pressionarBotao(this);
+    botaoEsquerdo();
+});  
+$("#botao-select-direito").on("click", function(){
+    pressionarBotao(this);
+    botaoDireito();
+});
+$("#esc").on("click", function(){
+    pressionarBotao(this);
+    botaoEsc();
+});
+$("#clock").on("click", function(){
+    pressionarBotao(this);
+    botaoClock();
+});
 

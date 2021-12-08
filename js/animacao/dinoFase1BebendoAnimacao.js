@@ -1,4 +1,4 @@
-import { dinoArrotando } from "./dino-fase1-arrotando.js";
+import { dinoArrotando } from "./dinoFase1Arrotando.js";
 import { aguaFrame1, aguaFrame2, aguaFrame3, aguaFrame4, aguaFrame5, aguaFrame6, aguaFrame7} from "../frames/dinoFase1BebendoFrames.js";
 
 const framesDinoBebendo = [aguaFrame1, aguaFrame2, aguaFrame3, aguaFrame4, aguaFrame5, aguaFrame6, aguaFrame7];

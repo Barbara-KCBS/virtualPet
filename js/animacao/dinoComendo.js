@@ -1,6 +1,6 @@
 import { pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
-import { dinoArrotando } from "./dino-fase1-arrotando.js";
+import { dinoArrotando } from "./dinoFase1Arrotando.js";
 var dinoEstaComendo = false;
 
 function indicarSeDinoEstaComendo(boleano){

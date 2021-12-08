@@ -4,7 +4,7 @@ import { dinoFase1Arroto } from "../frames/dinoFase1ReacoesFrame.js";
 import { opcoesDeComida, permitirPercorrerComidas } from "../outrosRecursos/opcoesDeComida.js";
 import { atividade, habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
-import { dinoEstaComendo, indicarSeDinoEstaComendo } from "./dino-comendo.js";
+import { dinoEstaComendo, indicarSeDinoEstaComendo } from "./dinoComendo.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function dinoArrotando(){

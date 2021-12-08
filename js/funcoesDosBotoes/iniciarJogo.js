@@ -1,4 +1,4 @@
-import { chocarOvo } from "../animacao/iniciar-jogo.js";
+import { chocarOvo } from "../animacao/iniciarJogo.js";
 
 function botaoIniciar(){
     $("#img-chavinha").fadeOut(1000);

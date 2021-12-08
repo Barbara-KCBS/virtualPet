@@ -5,7 +5,7 @@ body{
 }
 .corpo-tamagotchi{  
     position: relative;
-    width: 30%; 
+    width: 500px; 
     display: flex;
     justify-content: center;    
  }
@@ -100,8 +100,3 @@ body{
     bottom: -8%;
     right: 10%;
 } 
-@media (max-width: 600px){
-    .corpo-tamagotchi{  
-        width: 90%; 
-    }
-}

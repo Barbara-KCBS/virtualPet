@@ -1,5 +1,5 @@
 import { banhoDinoFase1Frames } from "../frames/dinoFase1BanhoFrames.js";
-import { dinoFase1Feliz } from "./dino-fase1-feliz-animacao.js";
+import { dinoFase1Feliz } from "./dinoFase1FelizAnimacao.js";
 
 function banharDinoFase1(){
 

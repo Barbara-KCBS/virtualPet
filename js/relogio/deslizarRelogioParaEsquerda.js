@@ -1,4 +1,4 @@
-import { deslizarTelaPrincipalParaEsquerda } from "../animacao/dino-fase1-animacao.js";
+import { deslizarTelaPrincipalParaEsquerda } from "../animacao/dinoFase1Animacao.js";
 import {  deslizarHoraAtualDig1ParaEsqueda, deslizarDoisPontosParaEsqueda,  deslizarPeriodoAtualParaEsqueda, deslizarMinutoAtualDig1ParaEsqueda, deslizarMinutoAtualDig2ParaEsqueda, deslizarHoraAtualDig2ParaEsqueda, deslizarHoraAtualParaEsqueda } from "../relogio/ocultarPainelDoRelogio.js";
 
 

@@ -1,6 +1,6 @@
 import {chocarOvoFrame1, chocarOvoFrame2, chocarOvoFrame3, chocarOvoFrame4, chocarOvoFrame5, chocarOvoFrame6, chocarOvoFrame7, chocarOvoFrame8, chocarOvoFrame9, chocarOvoFrame10, chocarOvoFrame11, chocarOvoFrame12, chocarOvoFrame13, chocarOvoFrame14, chocarOvoFrame15, chocarOvoFrame16, chocarOvoFrame17, chocarOvoFrame18, chocarOvoFrame19, chocarOvoFrame20} from "../frames/framesChocarOvo.js";
 import { habilitarEventosIniciais } from "../principal/telaInicial.js";
-import { dinoFase1 } from "./dino-fase1-animacao.js";
+import { dinoFase1 } from "./dinoFase1Animacao.js";
 
 
 function ligarEdesligarPixels(frame, indice){

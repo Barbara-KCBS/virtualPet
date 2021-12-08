@@ -1,6 +1,6 @@
 import { dinoFase1EstudandoFrame1, dinoFase1EstudandoFrame2 } from "../frames/dinoFase1EstudandoFrames.js";
 import { habilitarEventosIniciais } from "../principal/telaInicial.js";
-import { dinoFase1 } from "./dino-fase1-animacao.js";
+import { dinoFase1 } from "./dinoFase1Animacao.js";
 
 function dinoFase1Estudando(){
 
