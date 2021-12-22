@@ -1,13 +1,5 @@
 body{
-    background-color: rgba(13, 3, 39, 0.719);
-}
-header{
-    width: 100%;
-    height: 10em;   
-    background-color: rgba(43, 226, 211, 0.425);
-}
-.principal{
-    margin-top: 10%;
+    background-color: rgba(0, 0, 0, 0.788);
     display: flex;
     justify-content: center;
 }
@@ -27,7 +19,7 @@ header{
     align-items: center;
     width: 53%;
     height: 38%;
-    top: 32%;
+    top: 31.5%;
 }
 .colunas-das-atividades{
     display: flex;
@@ -41,25 +33,26 @@ header{
     justify-content: space-around;
 }
 .atividade-esquerda, .atividade-direita{
-    width: 100%;   
+    width: 100%;
 }
-
 .main{
     display: flex;
     flex-direction: column;
-    border: 0.5px solid #989d8c50;
-    box-sizing: border-box;
+    gap: 1px 1px;
+    /* border: solid red; */
+    width: 66.67%;
+    height: 88.5%;
+    padding-top: 10px;
 }
 .linha{
     display: flex;
     flex-direction: row;
+    gap: 1px 1px;
 }
 .pixel{
-    width: 9.5px;
-    height: 9.5px;
-    border: 0.1px solid #989d8c65;
-    /* background-clip: padding-box; */
-    box-sizing: border-box;
+    width: 8.5px;
+    height: 8.5px;
+    box-shadow: 0 0 1em rgba(128, 125, 125, 0.233);
 }
 .preto{
     background-color: black;
@@ -107,4 +100,4 @@ header{
     border-radius: 50%;
     bottom: -8%;
     right: 10%;
-} 
+}
