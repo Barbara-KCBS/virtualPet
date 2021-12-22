@@ -1,5 +1,13 @@
 body{
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgba(13, 3, 39, 0.719);
+}
+header{
+    width: 100%;
+    height: 10em;   
+    background-color: rgba(43, 226, 211, 0.425);
+}
+.principal{
+    margin-top: 10%;
     display: flex;
     justify-content: center;
 }
@@ -19,7 +27,8 @@ body{
     align-items: center;
     width: 53%;
     height: 38%;
-    top: 31.5%;
+    top: 32%;
+    /* border: 1px solid; */
 }
 .colunas-das-atividades{
     display: flex;
@@ -33,25 +42,25 @@ body{
     justify-content: space-around;
 }
 .atividade-esquerda, .atividade-direita{
-    width: 100%;
+    width: 100%;   
 }
+
 .main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 66.67%;
-    height: 88.5%;
+    border: 0.5px solid #989d8c50;
+    box-sizing: border-box;
+
 }
 .linha{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 5.5%;
 }
 .pixel{
-    width: 8px;
-    height: 8px;
-    box-shadow: 0 0 1em rgba(128, 125, 125, 0.233);
+    width: 9.5px;
+    height: 9.5px;
+    border: 0.5px solid #989d8c83;
+    box-sizing: border-box;
 }
 .preto{
     background-color: black;

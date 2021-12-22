@@ -1,4 +1,3 @@
-// import { lanceDoJogador, pontosDoJogador } from "./escolherLanceDoJogador";
 import { alterarPontosDoJogador, lanceDoJogador, pontosDoJogador } from "./escolherLanceDoJogador.js";
 import { alterarPontosDoDino, lanceDoDino, pontosDoDino } from "./mostrarLanceDoDino.js";
 import { resultadoDosLances } from "./resultadoDoJogo.js";

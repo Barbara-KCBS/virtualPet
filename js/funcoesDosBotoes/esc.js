@@ -2,7 +2,7 @@ import { telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { contadorSelecaoEsquerda, iconeDaEsquerda } from "./botaoSelecaoEsqueda/percorreIconesDaEsquerda.js";
 import { contadorSelecaoDireita, iconeDaDireita } from "./botaoSelecaoDireita/percorreInconesDaDireita.js";
 import { alterarAtividade, atividade, esconderIcones, usoDoEsc } from "../principal/telaInicial.js";
-import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
+import { tela, voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function botaoEsc(){
     if(atividade == ""){
@@ -12,7 +12,7 @@ function botaoEsc(){
         voltarParaTelaPrincipal();
         return
     }
-    if(telaPrincipal && atividade != ""){
+    if(tela && atividade != ""){
         alterarAtividade("");
         esconderIcones();
         iconeDaDireita(0);

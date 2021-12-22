@@ -8,7 +8,13 @@ import { relogio, relogioNaTela } from "../funcoesDosBotoes/clock.js";
 import { alterarContadorIntervaloSemInteracao, contadorIntervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "./intervaloSemInteracao.js";
 import { mostrarPainelDoArcondionado, painelDoArcondicionado } from "../outrosRecursos/painelDoArCondicionado.js";
 
-alterarContadorIntervaloSemInteracao
+
+let tela = true;
+
+function estaNatelaPrincipal(boleano){
+    tela = boleano;
+}
+
 function voltarParaTelaPrincipal(){
     pararIntervaloSemInteracao(true);
     alterarContadorIntervaloSemInteracao(0);
@@ -32,4 +38,4 @@ function voltarParaTelaPrincipal(){
     return
 }
 
-export { voltarParaTelaPrincipal }
+export { voltarParaTelaPrincipal, tela, estaNatelaPrincipal }

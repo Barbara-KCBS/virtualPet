@@ -13,12 +13,15 @@ function alterarPontosDoDino(valor){
 }
 
 function mostrarlanceDoDino(){
+
     habilitarEsc(false);
     pararIntervaloSemInteracao(true);
     alterarVezDoJogador(false);
+
     let indiceAleatorio = Math.floor(Math.random() * 3);
     lanceDoDino = tiposDeLance[indiceAleatorio];
     let contador = 0;
+    
     const intervalo = setInterval(()=>{
         if(contador == 0){
            $(".pixel").removeClass("preto");

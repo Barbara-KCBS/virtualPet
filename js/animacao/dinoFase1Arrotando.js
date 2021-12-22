@@ -5,7 +5,7 @@ import { opcoesDeComida, permitirPercorrerComidas } from "../outrosRecursos/opco
 import { atividade, habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { intervaloSemInteracao, pararIntervalo, pararIntervaloSemInteracao } from "../principal/intervaloSemInteracao.js";
 import { dinoEstaComendo, indicarSeDinoEstaComendo } from "./dinoComendo.js";
-import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
+import { estaNatelaPrincipal, tela, voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function dinoArrotando(){
     let contador = 1;
@@ -22,6 +22,7 @@ function dinoArrotando(){
             dinoFase1Arroto.toggleClass("preto");
             if(atividade === "beber"){
                 clearInterval(intervalo);
+                estaNatelaPrincipal(true);
                 voltarParaTelaPrincipal();
                 return 
             }   

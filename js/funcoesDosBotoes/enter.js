@@ -15,17 +15,17 @@ import { alterarContadorNecessidades, contadorNecessidades, necessidadesDoDino, 
 import { estaDentroDoJogo, iniciarJokenpo } from "../jogoJokenpo/iniciarJokenpo.js";
 import { mostrarlanceDoDino } from "../jogoJokenpo/mostrarLanceDoDino.js";
 import { vezDoJogador } from "../jogoJokenpo/escolherLanceDoJogador.js";
-import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
-
+import { estaNatelaPrincipal, tela, voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function botaoEnter(){
     if(atividade == "" && percorrerIconesDaEsquerda){
         selecaoEsquerda();
         return;
     }
-    if(atividade == "beber" && telaPrincipal){
+    if(atividade == "beber" && tela){
         habilitarEventosIniciais(false);
         pararDinoTelaPrincipal(false);
+        estaNatelaPrincipal(false)
         dinoFase1Bebendo();
         return
     }

@@ -1,3 +1,4 @@
+import { pararDinoTelaPrincipal, telaPrincipal } from "../animacao/dinoFase1Animacao.js";
 import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
 
 var luzOn = $(".B01, .B02, .B03, .B04, .B05, .B06, .B07, .B08, .B09, .B10, .B11, .B12, .B13, .B14, .B15, .B16, .B17, .B18, .B19, .C10, .C11, .C12, .C13, .C14, .C15, .C16, .C17, .C18, .C19, .D02, .D03, .D04, .D06, .D07, .D08, .D10, .D14, .D17, .E02, .E04, .E06, .E08, .E10, .E12, .E14, .E16, .E17, .E19,  .F02, .F04, .F06, .F08, .F10, .F12, .F14, .F17, .G02, .G03, .G04, .G06, .G08, .G10, .G14, .G16, .G17, .G19, .H10, .H11, .H12, .H13, .H14, .H15, .H16, .H17, .H18, .H19, .I01, .I02, .I03, .I04, .I05, .I06, .I07, .I08, .I09, .I10, .I11, .I12, .I13, .I14, .I15, .I16, .I17, .I18, .I19, .K05, .L04, .L05, .L06, .M03, .M04, .M05, .M06, .M07, .N02, .N03, .N04, .N05, .N06, .N07, .N08, .O04, .O05, .O06, .P04, .P05, .P06");
