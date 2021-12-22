@@ -50,7 +50,6 @@ header{
     flex-direction: column;
     border: 0.5px solid #989d8c50;
     box-sizing: border-box;
-
 }
 .linha{
     display: flex;
@@ -59,7 +58,8 @@ header{
 .pixel{
     width: 9.5px;
     height: 9.5px;
-    border: 0.5px solid #989d8c83;
+    border: 0.1px solid #989d8c65;
+    /* background-clip: padding-box; */
     box-sizing: border-box;
 }
 .preto{
