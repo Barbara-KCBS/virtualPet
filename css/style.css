@@ -1,5 +1,18 @@
 body{
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgb(39, 4, 70);
+}
+.instrucoes{
+    width: 80%;
+    margin: 30px auto;
+}
+.banner{
+    width: 70%;
+    margin: 0 auto;
+    height: 300px;
+    background-color: blueviolet;
+   
+}
+.principal{
     display: flex;
     justify-content: center;
 }
@@ -53,6 +66,8 @@ body{
     width: 8.5px;
     height: 8.5px;
     box-shadow: 0 0 1em rgba(128, 125, 125, 0.233);
+    /* border: solid 1px;
+    box-sizing: border-box; */
 }
 .preto{
     background-color: black;
