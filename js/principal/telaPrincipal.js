@@ -26,7 +26,7 @@ function voltarParaTelaPrincipal(){
     habilitarEventosIniciais(true);
     entrarNoJogo(false);
     habilitarEsc(false);
-    
+    estaNatelaPrincipal(true)
     if(estadoAtualDaLuz){
         dinoFase1(true);
     } else { 

@@ -1,9 +1,10 @@
 import { dinoFase1EstudandoFrame1, dinoFase1EstudandoFrame2 } from "../frames/dinoFase1EstudandoFrames.js";
 import { habilitarEventosIniciais } from "../principal/telaInicial.js";
 import { dinoFase1 } from "./dinoFase1Animacao.js";
+import { estaNatelaPrincipal, voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
 
 function dinoFase1Estudando(){
-
+    estaNatelaPrincipal(false)
     let contador = 1;
 
     var intervalo = setInterval(() =>{
@@ -17,8 +18,7 @@ function dinoFase1Estudando(){
         if(contador === 4){
             dinoFase1EstudandoFrame2.toggleClass("preto");
             clearInterval(intervalo);
-            habilitarEventosIniciais(true);
-            dinoFase1(true) ;           
+            voltarParaTelaPrincipal();
         }   
 
         contador ++;

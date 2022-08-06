@@ -1,9 +1,10 @@
 import { carinhoFrame1, carinhoFrame2 } from "../frames/dinoFase1CarinhoFrames.js";
 import { voltarParaTelaPrincipal } from "../principal/telaPrincipal.js";
+import { estaNatelaPrincipal } from "../principal/telaPrincipal.js";
 
 function fazerCarinhoNoDino(){
+    estaNatelaPrincipal(false);
     let contador = 1;
-
     var intervalo = setInterval(() =>{
         if(contador == 1){  
             $(".pixel").removeClass("preto");

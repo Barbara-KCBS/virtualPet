@@ -3,7 +3,6 @@ import { habilitarEsc, usoDoEsc } from "../principal/telaInicial.js";
 import { tiposDeLance } from "./iniciarJokenpo.js";
 import { inicioDoJogo, lancesDoJogadorFrames, lancesDoDinoFrames } from "./jogoJokenpoFrames.js";
 
-
 var contadorLanceDoJogador = 0;
 var pontosDoJogador = 0;
 var lanceDoJogador = "papel";

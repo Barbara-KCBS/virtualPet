@@ -43,7 +43,7 @@ function chocarOvo() {
         }
 
         contador ++;
-    }, 1000);    
+    }, 5);    
     
 }
 

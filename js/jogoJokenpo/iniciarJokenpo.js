@@ -5,6 +5,7 @@ import { alterarRodadas, rodadas } from "./compararLances.js";
 import { alterarContadorLanceDoJogador, alterarPontosDoJogador, contadorLanceDoJogador, escolherLanceDoJogador, pontosDoJogador } from "./escolherLanceDoJogador.js";
 import { inicioDoJogo, lancesDoJogadorFrames, lancesDoDinoFrames } from "./jogoJokenpoFrames.js";
 import { alterarPontosDoDino, pontosDoDino } from "./mostrarLanceDoDino.js";
+import { estaNatelaPrincipal } from "../principal/telaPrincipal.js";
 
 var tiposDeLance = ["papel", "pedra", "tesoura"];
 
@@ -15,6 +16,7 @@ function entrarNoJogo(boleano){
 }
 
 function iniciarJokenpo(){
+    estaNatelaPrincipal(false)
     let contador = 0;
     const intervalo = setInterval(()=>{
         if((contador == 3 || estaDentroDoJogo) && rodadas < 5){

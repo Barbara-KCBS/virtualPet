@@ -123,13 +123,4 @@ function botaoEnter(){
   
 }
 
-function botaoEsc(){
-    if(atividade != ""){
-        iconeDaDireita(0);
-        iconeDaEsquerda(0);
-        alterarAtividade("");
-        esconderIcones();
-    }
-}
-
 export { botaoEnter }

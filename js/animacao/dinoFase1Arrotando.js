@@ -22,9 +22,8 @@ function dinoArrotando(){
             dinoFase1Arroto.toggleClass("preto");
             if(atividade === "beber"){
                 clearInterval(intervalo);
-                estaNatelaPrincipal(true);
-                voltarParaTelaPrincipal();
-                return 
+                
+                return voltarParaTelaPrincipal();
             }   
         }
         if(contador === 5){
@@ -34,8 +33,8 @@ function dinoArrotando(){
             intervaloSemInteracao();
             permitirPercorrerComidas(true);
             indicarSeDinoEstaComendo(false);
-            opcoesDeComida();
-            return
+            
+            return opcoesDeComida();
         }
 
         contador += 1;
